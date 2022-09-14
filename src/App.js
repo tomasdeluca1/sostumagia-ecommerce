@@ -1,21 +1,22 @@
-import logo from "./logo.svg";
 import "./App.css";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <div className="App">
+      <NavBar />
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src="../../sos-tu-magia.png" className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Sitio en proceso llevado a cabo por <strong>Huevsite</strong>.
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://www.instagram.com/huevsite/?hl=es-la"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Ir al perfil
         </a>
       </header>
     </div>
