@@ -3,7 +3,6 @@ import "./navBar.css";
 import CartWidget from "./CartWidget";
 import LogoNavBar from "./LogoNavBar";
 
-// class NavBar extends component {}
 const NavBar = ({ counter }) => {
   return (
     <header>
