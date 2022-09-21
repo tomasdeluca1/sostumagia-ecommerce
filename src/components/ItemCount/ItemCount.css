@@ -1,0 +1,15 @@
+@media (min-width:0) {    
+    .flexButtons{
+      width: 54%;
+      margin: 0px 3% 20px 43%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  @media (min-width:756px) {
+    .flexButtons{
+      width: 100%;
+      margin: 0px;
+      justify-content: center;
+  }}

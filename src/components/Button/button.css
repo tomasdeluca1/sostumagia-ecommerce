@@ -1,0 +1,12 @@
+@media (min-width:0) {
+    .defaultButton{
+        border-radius: 0.5rem;
+        border:indianred 0px solid;
+        padding: 10px 15px;
+        margin: 5px;
+        font-size: 22px;
+    }   
+    .defaultButton:hover{
+        cursor: pointer ;
+    } 
+}
