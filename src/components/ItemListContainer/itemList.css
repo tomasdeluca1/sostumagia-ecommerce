@@ -1,0 +1,16 @@
+@media (min-width:0) {
+    .itemFlex{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+    }   
+}
+
+@media (min-width:756px) {
+    .itemFlex{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }   
+}

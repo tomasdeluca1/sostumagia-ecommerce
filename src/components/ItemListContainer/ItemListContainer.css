@@ -1,7 +1,7 @@
 @media (min-width: 0) {
     .itemListView {
-        width: 54%;
-        margin: 160px 3% 10px 43%;
+        width: 100%;
+       margin: 0;
         right: 0;
         display: flex;
         justify-content: flex-end;
@@ -26,6 +26,9 @@
         width: 50%;
         padding:30px;
     }
+    .loading{
+        margin: 30px;
+    }
  
 }
 @media (min-width: 756px) {
@@ -36,6 +39,7 @@
     }
     .viewsTitle{
         font-size: 2rem;
+        margin-bottom: 40px;
     }
 }
 @media (min-width: 942px) {

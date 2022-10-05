@@ -1,7 +1,7 @@
 @media (min-width:0) {    
     .flexButtons{
       width: 54%;
-      margin: 0px 3% 20px 43%;
+      margin:0 ;
       display: flex;
       justify-content: center;
       align-items: center;
