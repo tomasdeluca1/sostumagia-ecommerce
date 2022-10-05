@@ -9,6 +9,7 @@
         align-items: center;
         padding: 15px 5%;
         position: fixed;
+        visibility: hidden;
         top: 0;
       }
       .logo-img-header{
@@ -77,6 +78,7 @@
     align-items: center;
     padding: 15px 3%;
     position: relative;
+    visibility: visible;
     top: 0;
   }
   .navbar-list{

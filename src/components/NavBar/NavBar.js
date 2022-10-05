@@ -2,37 +2,34 @@ import React from "react";
 import "./navBar.css";
 import CartWidget from "./CartWidget";
 import LogoNavBar from "./LogoNavBar";
+import { Link } from "react-router-dom";
 
 const NavBar = ({ counter }) => {
   return (
     <header>
       <div className="menu">
-        <LogoNavBar />
+        <Link to="/">
+          <LogoNavBar />
+        </Link>
         <div>
           <div className="menu-right">
             <ul className="navbar-list">
               <li>
-                <a
-                  href="https://linktr.ee/sos.tumagia"
-                  className="menu-navbar-a"
-                >
-                  Quien soy
-                </a>
+                <Link to="/category/1" className="menu-navbar-a">
+                  Cursos presenciales
+                </Link>
               </li>
               <li>
-                <a
-                  href="https://www.instagram.com/sos.tumagia/?hl=es-la"
-                  className="menu-navbar-a"
-                >
-                  Cursos
-                </a>
+                <Link to="/category/2" className="menu-navbar-a">
+                  Cursos online
+                </Link>
               </li>
               <li>
-                <a href="#" className="menu-navbar-a">
-                  Juegos
-                </a>
+                <Link to="/category/3" className="menu-navbar-a">
+                  Cursos grabados
+                </Link>
               </li>
-              <li>
+              {/* <li>
                 <a href="#" className="menu-navbar-a">
                   Material gratuito
                 </a>
@@ -40,8 +37,8 @@ const NavBar = ({ counter }) => {
               <li>
                 <a href="#" className="menu-navbar-a">
                   Aprender a aprender
-                </a>
-              </li>
+                </a> */}
+              {/* </li> */}
             </ul>
           </div>
         </div>
