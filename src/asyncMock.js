@@ -70,15 +70,15 @@ export const getProducts = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(productos);
-    }, 2000);
+    }, 200);
   });
 };
 
-export const getProduct = (itemId) => {
+export const getProductById = (itemId) => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(productos.find((prod) => prod.id === itemId));
-    }, 2000);
+    }, 200);
   });
 };
 
@@ -86,6 +86,6 @@ export const getProductsByCategory = (categoryId) => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(productos.filter((prod) => prod.category === categoryId));
-    }, 2000);
+    }, 200);
   });
 };

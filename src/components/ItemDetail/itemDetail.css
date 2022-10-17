@@ -1,0 +1,137 @@
+@media (min-width:0) {
+    Link{
+        text-decoration: none;
+    }
+    .itemDetailCard{
+    
+        background-color: indianred;
+        box-shadow: 0px 0px 10px 2px rgb(40, 44, 52,0.4);
+        padding: 20px 20px 0 20px;
+        margin: 20px 5%;
+        border-radius: 1rem;
+        width: 50%;        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+    }
+    
+    .courseDetailName{
+       
+        color:  rgb(254, 213, 213);
+        width: 100%;
+        margin: 0 25% 25px 25%;
+        border-radius: 0.5rem;
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.2rem;
+        padding: 10px 5px;
+    }
+    
+    .courseDetailType{
+      
+        color:darkred;
+        font-weight: 500;
+        font-style: italic;
+        width: 50%;
+        margin: 0 23% 15px 23%;
+        background-color: rgb(254, 213, 213,0.9);
+        box-shadow: 0px 0px 15px 2px rgb(40, 44, 52,0.2);;
+        padding: 7px 2% ;
+        border-radius: 0.5rem;
+
+    }
+    .courseDetailImg{
+        width: 100%;
+        border-radius: 0.5rem; margin-bottom: 10px;
+    }
+    
+    .courseDetailTxt{
+        width: 95%;
+        margin: 10px  2.5% 30px 2.5%;
+        
+    }
+    
+    
+    h4{
+        margin: 0;
+    }
+    h5{
+        margin: 0;
+    }
+    p{
+        margin: 0;
+    }
+    .courseDetailDesc{
+        font-size: 16px;
+        text-align: left;
+        font-weight: 500;
+    }
+    .bottomDetailCard{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0 0 15px 0;
+    }
+    .courseDetailPriceStock{
+        width: 100%;
+        text-align: center;
+    align-items: center;
+    justify-content:space-between;
+}
+.courseDetailStock{
+    font-size: 14px;
+    color:  rgb(254, 213, 213);
+}
+.courseDetailPrice{
+    font-size: 20px;
+}
+.courseDetailBuyButton{
+    width: 40%;
+    text-align: right;
+}
+.courseDetailBuyButton button{
+    background-color: rgb(254, 213, 213);
+    padding: 7.5px 15px;
+    border: 1px solid rgb(254, 213, 213);
+    border-radius: 0.5rem;
+    font-size: 16px;
+    
+    font-weight: 800;
+}
+.addToCart{
+    text-decoration: none;
+    color: rgb(254, 213, 213);
+    background-color: rgb(179, 68, 68);
+    font-weight: 600;
+    width: 50%;
+    padding: 10px ;
+    text-align: center;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    margin-top: 20px;
+}
+.addToCart:hover{
+    color: indianred;
+    background-color: rgb(254, 213, 213);
+  
+}
+/* .agregarACarrito{
+    background-color:rgb(254, 213, 213) ;
+    padding: 10px;
+} */
+}
+
+@media (min-width:756px) {
+
+    .itemCard{
+        width: 33%;
+        margin: 20px 2.5% 20px 2.5%;
+    }}
+    @media (min-width:1024px) {
+    
+        .itemCard{
+            width: 25%;
+    
+        }}
+    

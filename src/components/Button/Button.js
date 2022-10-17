@@ -1,7 +1,17 @@
 import React, { useState } from "react";
 import "./button.css";
 
-const Button = ({ accion, label, background, fontColor }) => {
+const Button = ({
+  accion,
+  label,
+  background,
+  fontColor,
+  topLeft,
+  topRight,
+  bottomLeft,
+  bottomRight,
+  width,
+}) => {
   // console.log(accion);
   const [isHovering, setIsHovering] = useState(false);
 
@@ -21,6 +31,11 @@ const Button = ({ accion, label, background, fontColor }) => {
         style={{
           backgroundColor: isHovering ? background : "",
           color: isHovering ? fontColor : "",
+          borderTopLeftRadius: topLeft,
+          borderTopRightRadius: topRight,
+          borderBottomLeftRadius: bottomLeft,
+          borderBottomRightRadius: bottomRight,
+          width: width,
         }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}

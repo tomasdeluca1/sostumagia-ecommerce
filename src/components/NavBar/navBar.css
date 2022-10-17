@@ -9,7 +9,7 @@
         align-items: center;
         padding: 15px 5%;
         position: fixed;
-        visibility: hidden;
+        visibility:visible;
         top: 0;
       }
       .logo-img-header{
@@ -46,7 +46,7 @@
         border-radius: 0.5rem;
         box-shadow: 0px 0px 10px 2px rgb(40, 44, 52,0.2);
       }
-      .cart-box a{
+      a{
         text-decoration: none;
       }
       .cart-icon{
@@ -108,10 +108,10 @@
     border-radius: 0.5rem;
     box-shadow: 0px 0px 10px 2px rgb(40, 44, 52,0.2);
   }
-  .cart-box a{
+  .cart-box {
     text-decoration: none;
   }
-  .cart-icon{
+   .cart-icon{
   padding: 10px;
   }
   .cart-box:hover{

@@ -67,14 +67,14 @@
     }
     .bottomCard{
         display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
-        width: 95%;
-        margin: 0 2.5% 15px 2.5%;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0 0 15px 0;
     }
     .coursePriceStock{
-        width: 60%;
-        text-align: left;
+        width: 100%;
+        text-align: center;
     align-items: center;
     justify-content:space-between;
 }
@@ -83,7 +83,7 @@
     color:  rgb(254, 213, 213);
 }
 .coursePrice{
-    font-size: 24px;
+    font-size: 20px;
 }
 .courseBuyButton{
     width: 40%;
@@ -115,10 +115,14 @@
     background-color: rgb(254, 213, 213);
   
 }
+.agregarACarrito{
+    background-color:rgb(254, 213, 213) ;
+    padding: 10px;
+}
 }
 
 @media (min-width:756px) {
-    
+
     .itemCard{
         width: 33%;
         margin: 20px 2.5% 20px 2.5%;

@@ -1,9 +1,11 @@
 import React from "react";
-import "./../../asyncMock";
-import Item from "./Item";
+import "../../asyncMock";
+import Item from "../Item/Item";
 import "./itemList.css";
 
 const ItemList = ({ items }) => {
+  const type = items.map((item) => item.type);
+
   return (
     <div className="itemFlex">
       {items.map((item) => (

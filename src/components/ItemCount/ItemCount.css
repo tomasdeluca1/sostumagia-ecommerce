@@ -1,15 +1,37 @@
 @media (min-width:0) {    
     .flexButtons{
-      width: 54%;
+      width: 100%;
       margin:0 ;
       display: flex;
       justify-content: center;
       align-items: center;
     }
+     .itemCounter{ 
+      width: 50px;
+      height: 36px;
+      margin: 5px 0;
+      font-size: 22px;
+      /* border-top:indianred 1px solid;
+      border-bottom:indianred 1px solid; */
+      background-color:indianred;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      background-color: rgb(254, 213, 213,0.9);
+      color: indianred;
+  }   
+
+    
   }
   @media (min-width:756px) {
     .flexButtons{
       width: 100%;
       margin: 0px;
       justify-content: center;
-  }}
+  }
+  .itemCounter{ 
+    width: 35px;
+      
+  }
+}

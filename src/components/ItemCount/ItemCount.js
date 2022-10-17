@@ -1,21 +1,26 @@
-import React from "react";
+import { useState } from "react";
 import "./ItemCount.css";
 import Button from "../Button/Button";
 
-const ItemCount = ({ onAdd, onDiminish }) => {
+const ItemCount = ({ quantity, increment, decrement }) => {
   return (
     <div className="flexButtons">
       <Button
-        accion={onDiminish}
-        label="Restar"
-        background="red"
-        fontColor="white"
+        accion={decrement}
+        label="-"
+        background="rgb(254, 213, 213,0.9)"
+        fontColor="indianred"
+        topLeft="1rem"
+        bottomLeft="1rem"
       />
+      <div className="itemCounter">{quantity}</div>
       <Button
-        accion={onAdd}
-        label="Sumar"
-        background="green"
-        fontColor="white"
+        accion={increment}
+        label="+"
+        background="rgb(254, 213, 213,0.9)"
+        fontColor="indianred"
+        topRight="1rem"
+        bottomRight="1rem"
       />
     </div>
   );

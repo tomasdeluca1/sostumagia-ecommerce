@@ -2,9 +2,9 @@ import React from "react";
 import "./navBar.css";
 import CartWidget from "./CartWidget";
 import LogoNavBar from "./LogoNavBar";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
-const NavBar = ({ counter }) => {
+const NavBar = ({}) => {
   return (
     <header>
       <div className="menu">
@@ -15,19 +15,19 @@ const NavBar = ({ counter }) => {
           <div className="menu-right">
             <ul className="navbar-list">
               <li>
-                <Link to="/category/1" className="menu-navbar-a">
+                <NavLink to="/category/1" className="menu-navbar-a">
                   Cursos presenciales
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link to="/category/2" className="menu-navbar-a">
+                <NavLink to="/category/2" className="menu-navbar-a">
                   Cursos online
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link to="/category/3" className="menu-navbar-a">
+                <NavLink to="/category/3" className="menu-navbar-a">
                   Cursos grabados
-                </Link>
+                </NavLink>
               </li>
               {/* <li>
                 <a href="#" className="menu-navbar-a">
@@ -43,7 +43,9 @@ const NavBar = ({ counter }) => {
           </div>
         </div>
         <div>
-          <CartWidget contador={counter} />
+          <Link to="/cart" className="cart-box">
+            <CartWidget />
+          </Link>
         </div>
       </div>
     </header>

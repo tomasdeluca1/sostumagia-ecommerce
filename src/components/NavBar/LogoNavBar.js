@@ -1,11 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const LogoNavBar = () => {
   return (
     <div>
-      <a href="#">
-        <img src="../../sos-tu-magia.png" className="logo-img-header"></img>
-      </a>
+      <img src="../../sos-tu-magia.png" className="logo-img-header" />
     </div>
   );
 };
