@@ -4,42 +4,21 @@ import "../../asyncMock";
 import "./itemDetail.css";
 import ItemCount from "../ItemCount/ItemCount";
 import { CartContext } from "../../context/cartContext/CartContext";
+import { NotificationContext } from "../../context/NotificationContext/Notification";
 
-const ItemDetail = ({
-  id,
-  name,
-  img,
-  type,
-  stock,
-  description,
-  price /*, counter, onAdd, onDiminish*/,
-}) => {
+const ItemDetail = ({ id, name, img, type, stock, description, price }) => {
   const [quantityToAdd, setQuantityToAdd] = useState(0);
-  const [quantity, setQuantity] = useState(1);
 
   const { addItem } = useContext(CartContext);
+  const { setNotification } = useContext(NotificationContext);
 
-  // useEffect () = () =>{}
-
-  const increment = () => {
-    if (quantity < stock) {
-      setQuantity(quantity + 1);
-    }
-  };
-
-  const decrement = () => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
-    }
-  };
-
-  const handleOnAdd = () => {
-    // setQuantityToAdd(quantity);
+  const handleOnAdd = (quantity) => {
+    setQuantityToAdd(quantity);
 
     const productToAdd = { id, name, price, img, quantity };
+
     addItem(productToAdd);
-    console.log(productToAdd);
-    // setNotification('success', `Se agrego correctamente ${quantity} ${name}`)
+    setNotification("success", `Se agrego correctamente ${quantity} ${name}`);
   };
 
   return (
@@ -49,12 +28,7 @@ const ItemDetail = ({
         <img className="courseDetailImg" src={img} alt={id} />
       </div>
       <div className="courseDetailTxt">
-        <h4
-          className="courseDetailType"
-          style={{ width: "50%", margin: "0 20% 15px 20%" }}
-        >
-          {type}
-        </h4>
+        <h4 className="courseDetailType">{type}</h4>
         <p className="courseDetailDesc">{description}</p>
       </div>
       <div className="bottomDetailCard">
@@ -62,45 +36,14 @@ const ItemDetail = ({
           <h5 className="courseDetailStock">Disponibles: {stock}</h5>
           <h4 className="courseDetailPrice">{price}</h4>
         </div>
-        <div>
-          {quantityToAdd === 0 ? (
-            <ItemCount
-              onAdd={handleOnAdd}
-              increment={increment}
-              decrement={decrement}
-              quantity={quantity}
-              setQuantity={setQuantity}
-              stock={stock}
-            />
-          ) : (
-            <Link to="/cart">Finalizar compra</Link>
-          )}
-        </div>
       </div>
-      {/* <Link
-        to="/cart"
-        className="addToCart"
-        style={{
-          background: "rgb(254, 213, 213)",
-          color: "indianred",
-          border: "0px",
-          cursor: "pointer",
-        }}
-      >
-        Agregar al carrito
-      </Link> */}
-      <div
-        onClick={handleOnAdd}
-        // to="/cart"
-        className="addToCart"
-        style={{
-          background: "rgb(254, 213, 213)",
-          color: "indianred",
-          border: "0px",
-          cursor: "pointer",
-        }}
-      >
-        Agregar al carrito
+
+      <div>
+        {quantityToAdd === 0 ? (
+          <ItemCount onAdd={handleOnAdd} stock={stock} />
+        ) : (
+          <Link to="/cart">Finalizar compra</Link>
+        )}
       </div>
     </div>
   );
