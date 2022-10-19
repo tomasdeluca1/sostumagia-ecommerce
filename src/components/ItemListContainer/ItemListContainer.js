@@ -1,30 +1,54 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import "./itemListContainer.css";
-import { getProducts, getProductsByCategory } from "./../../asyncMock";
+// import { getProducts, getProductsByCategory } from "./../../asyncMock";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
+import { getDocs, collection, query, where } from "firebase/firestore";
+import { db } from "../../services/firebase/index";
+import { NotificationContext } from "../../context/NotificationContext/Notification";
 
 const ItemListContainer = ({ greeting, stock }) => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
-  const { categoryId } = useParams();
+  const { setNotification } = useContext(NotificationContext);
+
+  const { categoryType } = useParams();
 
   useEffect(() => {
-    const asyncFunction = categoryId ? getProductsByCategory : getProducts;
+    const collectionRef = categoryType
+      ? query(collection(db, "products"), where("type", "==", categoryType))
+      : collection(db, "products");
 
-    asyncFunction(categoryId)
+    getDocs(collectionRef)
       .then((res) => {
-        setProducts(res);
+        const productAdapted = res.docs.map((doc) => {
+          const data = doc.data();
+          return { id: doc.id, ...data };
+        });
+        setProducts(productAdapted);
       })
-      .catch((error) => {
-        setError(true);
-      })
+      .catch((error) =>
+        setNotification("fail", "No se pueden obtener los productos")
+      )
       .finally(() => {
         setLoading(false);
       });
-  }, [categoryId]);
+
+    /*
+    // const asyncFunction = categoryType ? getProductsByCategory : getProducts
+    // asyncFunction(categoryType)
+    //   .then((res) => {
+    //     setProducts(res);
+    //   })
+    //   .catch((error) => {
+    //     setError(true);
+    //   })
+    //   
+    //    
+    //   ; */
+  }, [categoryType]);
 
   if (loading) {
     return <h1 className="loading">Loading...</h1>;
@@ -40,7 +64,7 @@ const ItemListContainer = ({ greeting, stock }) => {
     <div className="itemListView">
       <h1 className="viewsTitle">
         {greeting}
-        {categoryId ? (
+        {categoryType ? (
           <strong style={{ marginTop: "10x" }}> {type[0]}</strong>
         ) : (
           ""
@@ -49,6 +73,7 @@ const ItemListContainer = ({ greeting, stock }) => {
 
       {/* <h1>{stock}</h1> */}
       <ItemList items={products} />
+
       {/* </div> */}
     </div>
   );

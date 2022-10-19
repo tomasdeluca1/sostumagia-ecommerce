@@ -21,7 +21,27 @@
       background-color: rgb(254, 213, 213,0.9);
       color: indianred;
   }   
-
+  .addToCart{
+    text-decoration: none;
+    background-color: rgb(254, 213, 213);
+    color: indianred;
+    border: 0px;
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%;
+    padding: 10px 20px ;
+    text-align: center;
+    font-size: 16px;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    margin: 10px 0 0 0;
+}
+.addToCart:hover{
+    background-color:white;
+}
+.itemCount{
+  width: 100%;
+}
     
   }
   @media (min-width:756px) {
