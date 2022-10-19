@@ -1,18 +1,25 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { CartContext } from "../../context/cartContext/CartContext";
 import CartCard from "./CartCard";
 import Button from "../Button/Button";
+import { NotificationContext } from "../../context/NotificationContext/Notification";
 
-// const { cart } = useContext(CartContext);
-// console.log(cart);
 const Cart = () => {
   const { cart } = useContext(CartContext);
-
   const { removeList } = useContext(CartContext);
+  const { setNotification } = useContext(NotificationContext);
+
+  useEffect(() => {
+    setNotification("fail", "Carrito de compras vaciado");
+  }, [removeList]);
+
+  const arrayCart = cart;
+
+  if (arrayCart.length === 0) return <h2>El carrito se encuentra vacío</h2>;
 
   return (
     <div>
-      {cart.map((item) => (
+      {arrayCart.map((item) => (
         <CartCard
           id={item.id}
           key={item.id}
