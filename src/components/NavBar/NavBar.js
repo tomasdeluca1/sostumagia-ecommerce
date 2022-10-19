@@ -5,6 +5,9 @@ import LogoNavBar from "./LogoNavBar";
 import { Link, NavLink } from "react-router-dom";
 
 const NavBar = ({}) => {
+  const isActive = ({ isActive }) =>
+    isActive ? "activeOption" : "menu-navbar-a";
+
   return (
     <header>
       <div className="menu">
@@ -15,17 +18,32 @@ const NavBar = ({}) => {
           <div className="menu-right">
             <ul className="navbar-list">
               <li>
-                <NavLink to="/category/1" className="menu-navbar-a">
+                <NavLink
+                  to="/category/presenciales"
+                  className={({ isActive }) =>
+                    isActive ? "activeOption" : "navBarOption"
+                  }
+                >
                   Cursos presenciales
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/category/2" className="menu-navbar-a">
+                <NavLink
+                  to="/category/online"
+                  className={({ isActive }) =>
+                    isActive ? "activeOption" : "navBarOption"
+                  }
+                >
                   Cursos online
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/category/3" className="menu-navbar-a">
+                <NavLink
+                  to="/category/grabados"
+                  className={({ isActive }) =>
+                    isActive ? "activeOption" : "navBarOption"
+                  }
+                >
                   Cursos grabados
                 </NavLink>
               </li>
