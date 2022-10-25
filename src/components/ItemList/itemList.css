@@ -9,7 +9,6 @@
 
 @media (min-width:756px) {
     .itemFlex{
-        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
     }   

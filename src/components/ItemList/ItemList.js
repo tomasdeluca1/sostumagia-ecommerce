@@ -1,5 +1,4 @@
 import React from "react";
-import "../../asyncMock";
 import Item from "../Item/Item";
 import "./itemList.css";
 

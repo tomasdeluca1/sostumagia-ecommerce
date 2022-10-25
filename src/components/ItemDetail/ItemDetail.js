@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-import "../../asyncMock";
 import "./itemDetail.css";
 import ItemCount from "../ItemCount/ItemCount";
 import { CartContext } from "../../context/cartContext/CartContext";
@@ -18,7 +17,6 @@ const ItemDetail = ({ id, name, img, type, stock, description, price }) => {
     const productToAdd = { id, name, price, img, quantity };
 
     addItem(productToAdd);
-    setNotification("success", `Se agrego correctamente ${quantity} ${name}`);
   };
 
   return (
@@ -34,7 +32,7 @@ const ItemDetail = ({ id, name, img, type, stock, description, price }) => {
       <div className="bottomDetailCard">
         <div className="courseDetailPriceStock" style={{ textAlign: "left" }}>
           <h5 className="courseDetailStock">Disponibles: {stock}</h5>
-          <h4 className="courseDetailPrice">{price}</h4>
+          <h4 className="courseDetailPrice">{price} ARS</h4>
         </div>
       </div>
 
