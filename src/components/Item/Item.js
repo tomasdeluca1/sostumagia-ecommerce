@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "../../asyncMock";
 import "./item.css";
 import { Link } from "react-router-dom";
 import { addDoc, collection } from "firebase/firestore";
@@ -20,7 +19,7 @@ const Item = ({ id, name, description, price, type, img, stock, category }) => {
       <div className="bottomCard">
         <div className="coursePriceStock">
           <h5 className="courseStock">Disponibles: {stock}</h5>
-          <h4 className="coursePrice">{price}</h4>
+          <h4 className="coursePrice">{price} ARS</h4>
         </div>
       </div>
       <Link to={`/item/${id}`} className="linkToItem">
