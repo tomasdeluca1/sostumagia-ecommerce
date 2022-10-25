@@ -25,7 +25,7 @@ const CartCard = ({ id, name, price, img, quantity }) => {
       </div>
       <div className="cartCardSeparator">
         <div>Precio</div>
-        <h3>{price}</h3>
+        <h3>{price} ARS</h3>
       </div>
       <div className="cartCardSeparator">
         <div>Cantidad</div>
