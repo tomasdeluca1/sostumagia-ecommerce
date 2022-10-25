@@ -1,6 +1,6 @@
 import React from "react";
 import "./navBar.css";
-import CartWidget from "./CartWidget";
+import CartWidget from "../CartWidget/CartWidget";
 import LogoNavBar from "./LogoNavBar";
 import { Link, NavLink } from "react-router-dom";
 
@@ -45,6 +45,16 @@ const NavBar = ({}) => {
                   }
                 >
                   Cursos grabados
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/checkout"
+                  className={({ isActive }) =>
+                    isActive ? "activeOption" : "navBarOption"
+                  }
+                >
+                  Checkout
                 </NavLink>
               </li>
               {/* <li>
