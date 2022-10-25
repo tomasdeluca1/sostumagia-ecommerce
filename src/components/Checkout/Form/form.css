@@ -1,0 +1,39 @@
+.checkoutForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+}
+.checkoutInput{
+    width: 40%;
+    height: 3rem;
+    border: 2px rgb(205, 92, 92, 0.5) solid;
+    border-radius: 0.5rem;
+    margin: 7px;
+    padding: 0 5px;
+    font-size: 1rem;
+}
+.checkoutTitle{
+    margin-top: 40px;
+}
+.checkoutSubmit{
+    background-color: rgb(205, 92, 92, 1);
+    color: white;
+    width: 25%;
+    border: 2px rgb(205, 92, 92, 0.5) solid;
+    border-radius: 0.5rem;
+    margin: 12px;
+    padding: 12px;
+}
+.checkoutSubmit:hover{
+    background-color: rgb(205, 92, 92, 0.5);
+    cursor: pointer;
+    border: 2px rgb(205, 92, 92, 1) solid;
+}
+
+.errorsForm{
+    color: red;
+    margin:5px 0 15px 0 ;
+}
