@@ -1,0 +1,19 @@
+.checkoutBox{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding: 70px 15%;
+   
+}
+h2{
+    margin: 0;
+}
+.productsOnCartRequired{
+
+    background-color: indianred;
+    padding: 10px 15px ;
+    border-radius: 1rem;
+    margin-top: 7px;
+    color: rgb(254, 213, 213);
+}
