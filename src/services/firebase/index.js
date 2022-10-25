@@ -1,13 +1,14 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
+import React from "react";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCTZztiEZAU2PVDPT9-5aPxTke0RPYyOkM",
-  authDomain: "sos-tu-magia-backend.firebaseapp.com",
-  projectId: "sos-tu-magia-backend",
-  storageBucket: "sos-tu-magia-backend.appspot.com",
-  messagingSenderId: "774807208564",
-  appId: "1:774807208564:web:04c467d2323bc8de1a8721",
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId,
 };
 
 // Initialize Firebase
