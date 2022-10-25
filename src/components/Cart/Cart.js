@@ -1,24 +1,24 @@
 import React, { useContext, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { CartContext } from "../../context/cartContext/CartContext";
 import CartCard from "./CartCard";
 import Button from "../Button/Button";
-import { NotificationContext } from "../../context/NotificationContext/Notification";
 
 const Cart = () => {
   const { cart } = useContext(CartContext);
-  const { removeList } = useContext(CartContext);
-  const { setNotification } = useContext(NotificationContext);
+  const { removeList, getTotal } = useContext(CartContext);
 
-  useEffect(() => {
-    setNotification("fail", "Carrito de compras vaciado");
-  }, [removeList]);
+  const totalPrice = getTotal();
 
   const arrayCart = cart;
 
-  if (arrayCart.length === 0) return <h2>El carrito se encuentra vacío</h2>;
+  if (arrayCart.length === 0)
+    return (
+      <h2 className="vistaImposibilitada">El carrito se encuentra vacío</h2>
+    );
 
   return (
-    <div>
+    <div className="cartFlex">
       {arrayCart.map((item) => (
         <CartCard
           id={item.id}
@@ -29,6 +29,7 @@ const Cart = () => {
           quantity={item.quantity}
         />
       ))}
+      <h1 style={{ margin: "30px 0 " }}>TOTAL A PAGAR: {totalPrice} ARS</h1>
       <Button
         accion={removeList}
         label="Eliminar carrito"
@@ -40,6 +41,9 @@ const Cart = () => {
         bottomLeft="0.5rem"
         width="200px"
       />
+      <div className="checkoutLink">
+        <Link to="/checkout"> Checkout</Link>
+      </div>
     </div>
   );
 };
