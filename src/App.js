@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
+import Home from "./components/Home/Home";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import Checkout from "./components/Checkout/Checkout";
-// import Button from "./components/Button/Button";
-import ItemCount from "./components/ItemCount/ItemCount";
 import CartContextProvider from "./context/cartContext/CartContext";
 import NotificationContextProvider from "./context/NotificationContext/Notification";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -18,12 +17,7 @@ function App() {
         <BrowserRouter>
           <NavBar />
           <Routes>
-            <Route
-              path="/"
-              element={
-                <ItemListContainer greeting="¡Bienvenido a sos tu magia!" />
-              }
-            />
+            <Route path="/" element={<Home />} />
             <Route
               path="/category/:categoryType"
               element={
