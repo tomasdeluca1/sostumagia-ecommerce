@@ -10,6 +10,7 @@
   }
   .agusJpg{
     width: 100%;
+    box-shadow: 0px 0px 10px 2px rgba(110, 110, 110, 0.6);
   }
   .fotoAgus{
     width: 50%;
@@ -19,10 +20,8 @@
     width: 50%;
     display: flex;
     align-items: center;
-    justify-content: center;
-   
-  }
-  
+    justify-content: flex-end;
+  }  
   .barsIcon{
     width: 70px;
     height: 70px;
@@ -30,11 +29,12 @@
     align-items: center;
     justify-content: center;
     color:indianred ;
+    background-color: rgb(254, 213, 213, 1);
     border: rgb(254, 213, 213) solid 0px; 
     box-shadow: 0px 0px 10px 2px rgb(254, 213, 213, 0.4);
     border-radius: 1rem;
     font-size: 32px;
-
+    margin-right: 60px;
   }
 
   .xIcon{
@@ -47,26 +47,33 @@
     align-items: center;
     justify-content: center;
     font-weight: 800;
+    margin-right: 60px;
   }
 
-  .displayNone{
+  .greetingDesktop{
     display: none;
   }
+
   .menu{
     background-color: indianred;
-    width: 40%;
-    height: 100vh;
+    width: 50%;
+    height: 100%;
+    border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    padding: 15px 5%;
+    padding-bottom: 10%;
     position: fixed;
     visibility:visible;
     top: 0;
+    transition: all 0.25s;
+    box-shadow: 0px 0px 10px 2px rgb(40, 44, 52,0.6);
   }
+
+
   .logo-img-header{
-    width: 100px;
+    width: 150px;
   }
   .navbar-list{
     display: flex;
@@ -87,6 +94,7 @@
     border:  rgb(254, 213, 213) 1px solid;
     border-radius: 0.5rem;
     box-shadow: 0px 0px 10px 2px rgb(40, 44, 52,0.2);
+    margin: 0 0 20px 0 ;
   }
   a{
     text-decoration: none;
@@ -129,8 +137,8 @@
     border-radius: 0.3rem;
     font-weight: 600;
     padding: 6px 13px;
-    font-size: 0.9rem;
-  }
+    font-size: 1rem;
+    }
 
   .cart-box:hover{
     background-color:  rgb(254, 213, 213);
@@ -143,18 +151,21 @@
 }
 
 @media (min-width: 756px) {
-    .barsIconBox{
-      display: none;
-    }
-    .logo-img-header{
-      width: 80px;
-    }
+  .menuMobile{
+    display: none;
+  }
+ 
+  .logo-img-header{
+    width: 80px;
+  }
   .displayNone{
-  display: block;  
-    }
-    .menu{
+    display: block;  
+  }
+  .menu{
     background-color:indianred;
     width: 94%;
+    margin-left: 0 !important;
+    border-radius: 0;
     height: auto;
     display: flex;
     flex-direction: row;
@@ -190,6 +201,7 @@
     align-items: center;
     border:  rgb(254, 213, 213) 1px solid;
     border-radius: 0.5rem;
+    margin: 0;
     box-shadow: 0px 0px 10px 2px rgb(40, 44, 52,0.2);
   }
   .cart-box {
