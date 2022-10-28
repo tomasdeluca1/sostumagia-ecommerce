@@ -1,12 +1,12 @@
 import { createContext, useState, useContext } from "react";
-import { NotificationContext } from "../NotificationContext/Notification";
+import { useNotification } from "../NotificationContext/Notification";
 
-export const CartContext = createContext();
+const CartContext = createContext();
 
 const CartContextProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
-  const { setNotification } = useContext(NotificationContext);
+  const { setNotification } = useNotification();
 
   const addItem = (productToAdd) => {
     if (!isInCart(productToAdd.id)) {
@@ -51,8 +51,6 @@ const CartContextProvider = ({ children }) => {
     return totalPrice;
   };
 
-
-
   return (
     <CartContext.Provider
       value={{
@@ -70,3 +68,7 @@ const CartContextProvider = ({ children }) => {
 };
 
 export default CartContextProvider;
+
+export const useCart = () => {
+  return useContext(CartContext);
+};

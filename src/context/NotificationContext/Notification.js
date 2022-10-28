@@ -1,11 +1,10 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useContext } from "react";
 import "./notifications.css";
 
 const Notification = ({ msg, severity }) => {
   const notificationStyles = {
     position: "absolute",
     right: 10,
-    top: 150,
     borderRadius: "1rem",
     padding: "10px 20px",
     color: "white",
@@ -23,7 +22,7 @@ const Notification = ({ msg, severity }) => {
   );
 };
 
-export const NotificationContext = createContext();
+const NotificationContext = createContext();
 
 export const NotificationProvider = ({ children }) => {
   const [message, setMessage] = useState("");
@@ -48,3 +47,7 @@ export const NotificationProvider = ({ children }) => {
 };
 
 export default NotificationProvider;
+
+export const useNotification = () => {
+  return useContext(NotificationContext);
+};
