@@ -1,65 +1,44 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./navBar.css";
 import CartWidget from "../CartWidget/CartWidget";
 import LogoNavBar from "./LogoNavBar";
 import { Link, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { getCategories } from "../../services/firebase/firestore";
+import { useAsync } from "../../Hooks/useAsync";
 
 const NavBar = () => {
   const isActive = ({ isActive }) =>
-    isActive ? "activeOption" : "menu-navbar-a";
+    isActive ? "activeOption" : "navBarOption";
 
   const [isMenuDisplayBlock, setIsMenuDisplayBlock] = useState(false);
 
+  const { data: categories } = useAsync(() => getCategories());
+
   return (
     <header>
-      <div className={isMenuDisplayBlock ? "displayNone" : "menu"}>
+      <div
+        className="menu"
+        style={
+          isMenuDisplayBlock ? { marginLeft: "0" } : { marginLeft: "-50%" }
+        }
+      >
         <Link to="/">
           <LogoNavBar />
         </Link>
         <div>
           <div className="menu-right">
             <ul className="navbar-list">
-              <li>
-                <NavLink
-                  to="/category/presenciales"
-                  className={({ isActive }) =>
-                    isActive ? "activeOption" : "navBarOption"
-                  }
-                >
-                  Cursos presenciales
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/category/online"
-                  className={({ isActive }) =>
-                    isActive ? "activeOption" : "navBarOption"
-                  }
-                >
-                  Cursos online
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/category/grabados"
-                  className={({ isActive }) =>
-                    isActive ? "activeOption" : "navBarOption"
-                  }
-                >
-                  Cursos grabados
-                </NavLink>
-              </li>
-              {/* <li>
-                <NavLink
-                to="/checkout"
-                className={({ isActive }) =>
-                isActive ? "activeOption" : "navBarOption"
-              }
-              >
-              Checkout
-              </NavLink>
-            </li> */}
+              {categories.map((cat) => (
+                <li key={cat.id}>
+                  <NavLink
+                    to={`/category/${cat.categoryId}`}
+                    className={isActive}
+                  >
+                    {cat.categoryTitle}
+                  </NavLink>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -72,7 +51,7 @@ const NavBar = () => {
       <div className="menuMobile">
         <div className="fotoAgus">
           <img
-            src="./../../img/fotoAgusSosTuMagia.jpg"
+            src="./../../img/fotoAgustinillis.jpg"
             className="agusJpg"
             alt=""
           />
@@ -80,15 +59,15 @@ const NavBar = () => {
 
         <div className="barsIconBox">
           <button
-            className={isMenuDisplayBlock ? "barsIcon" : "xIcon"}
+            className={isMenuDisplayBlock ? "xIcon" : "barsIcon"}
             onClick={() => {
               setIsMenuDisplayBlock(!isMenuDisplayBlock);
             }}
           >
             {isMenuDisplayBlock ? (
-              <FontAwesomeIcon icon="fa-solid fa-bars" />
-            ) : (
               "X"
+            ) : (
+              <FontAwesomeIcon icon="fa-solid fa-bars" />
             )}
           </button>
         </div>
