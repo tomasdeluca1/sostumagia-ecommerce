@@ -1,52 +1,37 @@
-import { useState, useEffect, useContext } from "react";
-// import { getProductById } from "../../asyncMock";
 import { useParams } from "react-router-dom";
-import { getDoc, doc } from "firebase/firestore";
-import { db } from "../../services/firebase";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import { NotificationContext } from "../../context/NotificationContext/Notification";
+import { getProductById } from "../../services/firebase/firestore";
+import { useAsync } from "../../Hooks/useAsync";
 import "../ItemListContainer/itemListContainer.css";
 
-const ItemDetailContainer = ({ setCart /*counter, onDiminish, onAdd*/ }) => {
-  const [product, setProduct] = useState();
-  const [loading, setLoading] = useState(true);
-
+const ItemDetailContainer = () => {
+  const mensajeError = "No se pudo traer la información del producto.";
   const { itemId } = useParams();
 
-  const { setNotification } = useContext(NotificationContext);
-
-  useEffect(() => {
-    const docRef = doc(db, "products", itemId);
-
-    getDoc(docRef)
-      .then((doc) => {
-        const data = doc.data();
-        const productAdapted = { id: doc.id, ...data };
-        setProduct(productAdapted);
-      })
-      .catch((error) => {
-        setNotification(
-          "error",
-          "No se pudo traer la información del producto."
-        );
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  }, [itemId]);
+  const {
+    data: product,
+    error,
+    loading,
+  } = useAsync(() => getProductById(itemId), [itemId], mensajeError);
 
   if (loading) {
     return <h1 className="loading">Cargando...</h1>;
   }
 
+  if (error) {
+    return <h1>Hay un error, comunicarse con el administrador.</h1>;
+  }
+
+  if (Object.keys(product).length === 1)
+    return (
+      <p style={{ margin: "50px 30px", fontSize: "1.3rem" }}>
+        El producto con ID: <strong>{product.id}</strong> no existe.
+      </p>
+    );
+
   return (
     <div className="itemListView">
-      {/* <h1 className="viewsTitle">Detalle del producto</h1> */}
-      {/* <div className="stock"> */}
-      {/* <h3>Cantidad de cursos disponibles:</h3> */}
-
-      <ItemDetail {...product} />
-      {/* </div> */}
+      <ItemDetail {...product} itemId={itemId} />
     </div>
   );
 };
