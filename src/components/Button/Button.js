@@ -12,7 +12,6 @@ const Button = ({
   bottomRight,
   width,
 }) => {
-  // console.log(accion);
   const [isHovering, setIsHovering] = useState(false);
 
   const handleMouseEnter = () => {

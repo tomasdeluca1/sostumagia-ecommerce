@@ -4,8 +4,9 @@
         height: 40px;
         border:indianred 2px solid;
         background-color:rgb(254, 213, 213,0.9);
-        margin: 5px 0;
+        margin: 5px 0 ;
         font-size: 20px;
+        transition: all 0.25s
     }   
     .defaultButton:hover{
         cursor: pointer ;
@@ -18,4 +19,5 @@
     .defaultButton{
         width: 35px;
        }
+       
 }
