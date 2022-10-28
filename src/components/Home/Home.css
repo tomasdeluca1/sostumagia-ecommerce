@@ -1,0 +1,83 @@
+@media (min-width: 0) {
+    .welcomeMessage{
+        display: none;
+    }
+}
+
+@media (min-width: 756px) {
+
+    .welcomeMessage{
+    display: flex;
+    width: 100%;
+    padding: 0px;
+    margin: 0;
+    background-color: indianred;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 1s;
+    animation-name: subir;
+  }
+  .agusBackground{
+    width: 50%;
+    display: flex;
+  }
+ 
+  .agusJpg{
+    width: 100%;
+    box-shadow: 0px 0px 0px 0px rgb(254, 213, 213, 0.6);
+  }
+  .fotoAgus{
+    width: 50%;
+    display: flex;
+
+  }
+  .greetingDesktop{
+    display: flex;
+    width: 50%;
+  }
+  .greetingBox{
+    width:90%;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    text-align: left;
+    justify-content: flex-end;
+    padding: 2.5% 5%  ;
+  }
+  .greetingTitle{
+    width: 100%;
+    font-size: 1rem;
+    color:   rgb(254, 213, 213);
+    font-weight: 900;
+    margin-bottom: 10px;
+  }
+  .greetingSubtitle{
+    width: 100%;
+    padding-top: 20px;
+    color:   rgb(254, 213, 213);
+    font-size: 0.8rem;
+  }
+  .greetingTxt{
+    width: 100%;
+    color:   rgb(254, 213, 213);
+    font-weight: 400;
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1024px) {
+    .greetingTitle{
+        font-size: 1.3rem;
+ 
+        margin-bottom: 10px;
+      }
+      .greetingTxt{
+  
+        font-size: 1.1rem;
+      }
+      .greetingSubtitle{
+        padding-top: 60px;
+        font-size: 1rem;
+      }
+    }
+    
