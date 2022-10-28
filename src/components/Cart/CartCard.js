@@ -1,10 +1,10 @@
 import "./cart.css";
 import Button from "../Button/Button";
-import { CartContext } from "../../context/cartContext/CartContext";
-import React, { useContext, useEffect } from "react";
+import { useCart } from "../../context/cartContext/CartContext";
+import React from "react";
 
 const CartCard = ({ id, name, price, img, quantity }) => {
-  const { deleteItem } = useContext(CartContext);
+  const { deleteItem } = useCart();
 
   const handleOnDelete = () => {
     deleteItem(id);

@@ -4,11 +4,12 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin-top: 60px;
     }
 .cartCard{
     width: 90%;
     height: 200px;
-    margin:  4%;
+    margin:  20px 4%;
     padding: 1%;
     border-radius: 1rem;
     background-color: indianred;
@@ -17,7 +18,10 @@
     align-items: center;
     justify-content: space-between;
 }
+.cartButtonsFlex{
+    display: flex;
 
+}
 .cartCardSeparator{
     width: 15%;
     padding: 10px;
@@ -36,9 +40,10 @@
     margin: 0;
 }
     .checkoutLink{
-        width: 198px;
+        width: 200px;
         height: 40px;
         border:indianred 2px solid;
+        color: black;
         background-color:rgb(254, 213, 213,0.9);
         margin: 5px 0;
         font-size: 20px;
