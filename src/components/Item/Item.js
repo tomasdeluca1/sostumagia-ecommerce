@@ -1,17 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./item.css";
 import { Link } from "react-router-dom";
-import { addDoc, collection } from "firebase/firestore";
-import { db } from "../../services/firebase/index";
+import ItemImg from "../ItemImg/ItemImg";
 
-const Item = ({ id, name, description, price, type, img, stock, category }) => {
+const Item = ({ id, name, description, price, type, img, stock }) => {
   return (
     <div className="itemCard">
-      <h4 className="courseType">{type}</h4>
       <div className="courseName">{name}</div>
-      <div>
-        <img className="courseImg" src={img} alt={name} />
-      </div>
+      {/* <div className="courseImg">
+        <img src={img} alt={name} />
+      </div> */}
+      <ItemImg productImg={img} />
       <div className="courseTxt">
         <p className="courseDesc">{description}</p>
       </div>
@@ -20,6 +19,9 @@ const Item = ({ id, name, description, price, type, img, stock, category }) => {
         <div className="coursePriceStock">
           <h5 className="courseStock">Disponibles: {stock}</h5>
           <h4 className="coursePrice">{price} ARS</h4>
+        </div>
+        <div>
+          <h4 className="courseType">{type}</h4>
         </div>
       </div>
       <Link to={`/item/${id}`} className="linkToItem">
