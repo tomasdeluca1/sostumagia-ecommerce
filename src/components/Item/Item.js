@@ -7,9 +7,6 @@ const Item = ({ id, name, description, price, type, img, stock }) => {
   return (
     <div className="itemCard">
       <div className="courseName">{name}</div>
-      {/* <div className="courseImg">
-        <img src={img} alt={name} />
-      </div> */}
       <ItemImg productImg={img} />
       <div className="courseTxt">
         <p className="courseDesc">{description}</p>

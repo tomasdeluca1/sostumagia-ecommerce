@@ -49,13 +49,13 @@ const NavBar = () => {
         </div>
       </div>
       <div className="menuMobile">
-        <div className="fotoAgus">
+        <Link to="/" className="fotoAgus">
           <img
             src="./../../img/fotoAgustinillis.jpg"
             className="agusJpg"
             alt=""
           />
-        </div>
+        </Link>
 
         <div className="barsIconBox">
           <button
