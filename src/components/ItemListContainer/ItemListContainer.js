@@ -1,4 +1,4 @@
-import "./itemListContainer.css";
+import "./ItemListContainer.css";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import { getProducts } from "../../services/firebase/firestore";
