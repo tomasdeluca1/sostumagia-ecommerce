@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCTZztiEZAU2PVDPT9-5aPxTke0RPYyOkM,", //process.env.REACT_APP_apiKey,
+  apiKey: "AIzaSyCTZztiEZAU2PVDPT9-5aPxTke0RPYyOkM", //process.env.REACT_APP_apiKey,
   authDomain: "sos-tu-magia-backend.firebaseapp.com", //process.env.REACT_APP_authDomain,
   projectId: "sos-tu-magia-backend", // process.env.REACT_APP_projectId,
   storageBucket: "sos-tu-magia-backend.appspot.com", // process.env.REACT_APP_storageBucket,
