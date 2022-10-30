@@ -30,7 +30,7 @@ function App() {
             <Route path="/checkout" element={<Checkout />} />
             <Route path="*" element={<h1>404 NOT FOUND</h1>} />
           </Routes>
-          <Footer />
+          {/* <Footer /> */}
         </BrowserRouter>
       </CartContextProvider>
     </NotificationContextProvider>
