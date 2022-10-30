@@ -18,6 +18,8 @@ Segundo paso:
 npm install
 ```
 
+> El archivo .env está creado pero no está en uso debido a un error en la configuración del mismo.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
