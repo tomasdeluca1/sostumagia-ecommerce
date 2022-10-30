@@ -1,3 +1,23 @@
+# E-commerce realizado para [@sostu.magia](https://nodejs.org/)
+
+## Proyecto llevado a cabo con ReactJs
+
+Impulsado con la idea de bancar el proyecto de mi hermana Agustina Deluca, ya que admiro realmente su habilidad para llegar a sus pacientes y dejar huella donde sea que esté.
+
+## Para comenzar la aplización hay que realizar los siguientes pasos
+
+Primer paso:
+
+```sh
+git clone https://github.com/tomasdeluca1/sos-tu-magia.git
+```
+
+Segundo paso:
+
+```sh
+npm install
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
