@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { getProductById } from "../../services/firebase/firestore";
 import { useAsync } from "../../Hooks/useAsync";
-import "../ItemListContainer/ItemListContainer.css";
+import "../ItemListContainer/itemListContainer.css";
 
 const ItemDetailContainer = () => {
   const mensajeError = "No se pudo traer la información del producto.";
