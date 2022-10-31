@@ -18,7 +18,7 @@ Segundo paso:
 npm install
 ```
 
-> El archivo .env está creado pero no está en uso debido a un error en la configuración del mismo.
+> El archivo .env no fue ocultado en el .gitignore para que los tutores de Coder House puedan calificar este trabajo con los productos de la base de datos con la que fue creada.
 
 # Getting Started with Create React App
 
