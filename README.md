@@ -18,7 +18,7 @@ Segundo paso:
 npm install
 ```
 
-> El archivo .env no fue ocultado en el .gitignore para que los tutores de Coder House puedan calificar este trabajo con los productos de la base de datos con la que fue creada.
+> Proyecto deployado en [Sos tu magia](https://sos-tu-magia.vercel.app/) con las variables de entorno configuradas.
 
 # Getting Started with Create React App
 
