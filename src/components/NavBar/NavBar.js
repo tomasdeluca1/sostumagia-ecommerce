@@ -20,11 +20,16 @@ const NavBar = () => {
       <div
         className="menu"
         style={
-          isMenuDisplayBlock ? { marginLeft: "0" } : { marginLeft: "-50%" }
+          isMenuDisplayBlock ? { marginLeft: "0" } : { marginLeft: "-76%" }
         }
       >
         <Link to="/">
-          <LogoNavBar />
+          <img
+            src="./../../img/fotoAgustinillis.jpg"
+            className="agusJpgMobile"
+            alt=""
+          />
+          <LogoNavBar className={"logo-img-header"} />
         </Link>
         <div>
           <div className="menu-right">
@@ -44,32 +49,34 @@ const NavBar = () => {
         </div>
         <div>
           <Link to="/cart" className="cart-box">
-            <CartWidget />
+            <CartWidget className={"cart-icon"} />
           </Link>
         </div>
       </div>
       <div className="menuMobile">
-        <Link to="/" className="fotoAgus">
-          <img
-            src="./../../img/fotoAgustinillis.jpg"
-            className="agusJpg"
-            alt=""
-          />
+        <Link to="/" className="logoBoxMobile">
+          <LogoNavBar className={"logoMobile"} />
         </Link>
 
-        <div className="barsIconBox">
-          <button
-            className={isMenuDisplayBlock ? "xIcon" : "barsIcon"}
-            onClick={() => {
-              setIsMenuDisplayBlock(!isMenuDisplayBlock);
-            }}
-          >
-            {isMenuDisplayBlock ? (
-              "X"
-            ) : (
-              <FontAwesomeIcon icon="fa-solid fa-bars" />
-            )}
-          </button>
+        <div className="cartBarsFlex">
+          <Link to="/cart" className="barsIconBox">
+            <CartWidget className={"cartIconMobile"} />
+          </Link>
+
+          <div className="barsIconBox">
+            <button
+              className={isMenuDisplayBlock ? "xIcon" : "barsIcon"}
+              onClick={() => {
+                setIsMenuDisplayBlock(!isMenuDisplayBlock);
+              }}
+            >
+              {isMenuDisplayBlock ? (
+                "x"
+              ) : (
+                <FontAwesomeIcon icon="fa-solid fa-bars" />
+              )}
+            </button>
+          </div>
         </div>
       </div>
     </header>

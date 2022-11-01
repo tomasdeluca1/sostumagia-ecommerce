@@ -1,42 +1,71 @@
 @media (min-width: 0) {
   .menuMobile{
     display: flex;
-    width: 100%;
-    padding: 0px;
+    width: 85%;
+    padding: 10px 5% 10px 10%;
     margin: 0;
     background-color: indianred;
     align-items: center;
     justify-content: space-between;
   }
+  .agusJpgMobile{
+    width: 100%;
+  }
   .agusJpg{
     width: 100%;
     box-shadow: 0px 0px 10px 2px rgba(110, 110, 110, 0.6);
   }
-  .fotoAgus{
+  .logoBoxMobile{
+    width: 100%;
+  }
+  .logoMobile{
     width: 50%;
+    padding: 5px 0;
     display: flex;
   }
   .barsIconBox{
-    width: 50%;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: flex-end;
   }  
+  .cartBarsFlex{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
   .barsIcon{
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color:indianred ;
-    background-color: rgb(254, 213, 213, 1);
+    color:rgb(254, 213, 213, 1);
+    
+    background-color: indianred;
     border: rgb(254, 213, 213) solid 0px; 
-    box-shadow: 0px 0px 10px 2px rgb(254, 213, 213, 0.4);
+    box-shadow: 0px 0px 10px 2px rgb(254, 213, 213, 0.1);
     border-radius: 1rem;
     font-size: 32px;
-    margin-right: 60px;
   }
-
+  .cartIconMobile{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    padding: 5px;
+    background-color:indianred;
+    color: rgb(254, 213, 213, 1);
+    border: rgb(254, 213, 213) solid 0px; 
+    box-shadow: 1px 1px 10px 2px rgb(254, 213, 213, 0.1);
+    border-radius: 1rem;
+    font-size: 18px;
+  }
+  .cartIconMobile:hover{
+   color:indianred;
+     background-color: rgb(254, 213, 213, 1);
+  }
   .xIcon{
     color: rgb(254, 213, 213);
     background-color: indianred;
@@ -47,7 +76,6 @@
     align-items: center;
     justify-content: center;
     font-weight: 800;
-    margin-right: 60px;
   }
 
   .greetingDesktop{
@@ -56,7 +84,7 @@
 
   .menu{
     background-color: indianred;
-    width: 50%;
+    width: 75%;
     height: 100%;
     border-radius: 0.5rem;
     display: flex;
@@ -74,6 +102,7 @@
 
   .logo-img-header{
     width: 150px;
+    display: none;
   }
   .navbar-list{
     display: flex;
@@ -154,9 +183,13 @@
   .menuMobile{
     display: none;
   }
+ .agusJpgMobile{
+  display: none;
+ }
  
   .logo-img-header{
     width: 80px;
+    display: block;
   }
   .displayNone{
     display: block;  
