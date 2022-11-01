@@ -17,6 +17,16 @@ const Cart = () => {
   return (
     <div className="cartFlex">
       <h1>CARRITO DE COMPRAS</h1>
+      {cart.map((item) => (
+        <CartCard
+          id={item.id}
+          key={item.id}
+          name={item.name}
+          price={item.price}
+          img={item.img}
+          quantity={item.quantity}
+        />
+      ))}
       <h2 style={{ margin: "10px 0 " }}>TOTAL A PAGAR: {totalPrice} ARS</h2>
       <div className="cartButtonsFlex">
         <Link to="/checkout">
@@ -33,6 +43,7 @@ const Cart = () => {
           {/* {" "}
           <div className="checkoutLink">Checkout</div> */}
         </Link>
+
         <Button
           accion={removeList}
           label="Eliminar carrito"
@@ -45,16 +56,6 @@ const Cart = () => {
           width="200px"
         />
       </div>
-      {cart.map((item) => (
-        <CartCard
-          id={item.id}
-          key={item.id}
-          name={item.name}
-          price={item.price}
-          img={item.img}
-          quantity={item.quantity}
-        />
-      ))}
     </div>
   );
 };

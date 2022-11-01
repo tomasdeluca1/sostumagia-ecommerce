@@ -21,15 +21,15 @@ const CartCard = ({ id, name, price, img, quantity }) => {
       </div>
       <div className="cartCardSeparator">
         <div>Producto</div>
-        <h3>{name}</h3>
+        <h3 className="cartName">{name}</h3>
       </div>
       <div className="cartCardSeparator">
         <div>Precio</div>
-        <h3>{price} ARS</h3>
+        <h3 className="cartName">{price} ARS</h3>
       </div>
       <div className="cartCardSeparator">
         <div>Cantidad</div>
-        <h3>{quantity}</h3>
+        <h3 className="cartName">{quantity}</h3>
       </div>
       <div className="cartCardSeparator">
         <Button

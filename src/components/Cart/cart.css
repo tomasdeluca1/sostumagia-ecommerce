@@ -20,7 +20,7 @@
 }
 .cartButtonsFlex{
     display: flex;
-
+    flex-direction: column;
 }
 .cartCardSeparator{
     width: 15%;
@@ -63,6 +63,9 @@
         padding: 10px 15px ;
         border-radius: 1rem;
         margin: 70px 20% 0 20%;
+        color: rgb(254, 213, 213);
+    }
+    .cartName{
         color: rgb(254, 213, 213);
     }
 }
