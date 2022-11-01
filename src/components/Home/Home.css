@@ -1,21 +1,75 @@
 @media (min-width: 0) {
     .welcomeMessage{
-        display: none;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0px;
+        margin: 0;
+    }
+ 
+    .fotoAgusHome{
+      display: none;
+    }
+  
+    .greetingDesktop{
+      display: flex;
+      width: 100%; height: 15vh;
+    }
+    .greetingBox{
+      width:100%;
+     
+      display: flex;
+      flex-direction: column;
+      align-items:center;
+      text-align: center;
+      justify-content: center;
+      padding: 5% 0 0 0;
+    }
+    .greetingTitle{
+      width: 100%;
+      font-size: 1.2rem;
+      color:   indianred;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+    .greetingSubtitle{
+      display: none;
+      margin: 20px 0 0 0  ;
+      padding: 10px;
+      color:   indianred;
+      background-color: rgb(254, 213, 213);
+      font-size: 0.8rem;
+    }
+    .greetingTxt{
+      width: 100%;
+      color: rgb(254, 213, 213);
+      background-color:   indianred;
+      font-weight: 400;
+      font-size: 1rem;
+      padding: 3px;
+      border-radius: 0.5rem;
     }
 }
 
 @media (min-width: 756px) {
-
+  .greetingBox{
+    align-items:flex-start;
+    justify-content: flex-end;
+    text-align: left;
+  }
+  .greetingDesktop{
+    width: 60%;
+    height: 30vh;
+  }
     .welcomeMessage{
     display: flex;
-    width: 100%;
-    padding: 0px;
-    margin: 0;
-    background-color: indianred;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     transition: all 1s;
     animation-name: subir;
+    box-shadow: 0px 0px 10px 2px rgb(40 44 52 / 30%);
+    background-color: indianred;
   }
   .agusBackground{
     width: 50%;
@@ -26,43 +80,30 @@
     width: 100%;
     box-shadow: 0px 0px 0px 0px rgb(254, 213, 213, 0.6);
   }
-  .fotoAgus{
-    width: 50%;
+  .fotoAgusHome{
+    width: 40%;
+    height: auto;
     display: flex;
-
+     background-image: url("../../../public/img/fotoAgustinillis.jpg");
+    background-size: cover;
+    background-position: center;
   }
-  .greetingDesktop{
-    display: flex;
-    width: 50%;
-  }
-  .greetingBox{
-    width:90%;
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start;
-    text-align: left;
-    justify-content: flex-end;
-    padding: 2.5% 5%  ;
-  }
-  .greetingTitle{
+.greetingTitle{
+  color:   rgb(254, 213, 213);
+  padding: 0 0 0 10px;
+}
+.greetingTxt{
+  color:   rgb(254, 213, 213);
+  padding: 0 0 0 10px;
+}
+  .agusBackground{
     width: 100%;
-    font-size: 1rem;
-    color:   rgb(254, 213, 213);
-    font-weight: 900;
-    margin-bottom: 10px;
+   height: 30vh;
   }
   .greetingSubtitle{
-    width: 100%;
-    padding-top: 20px;
-    color:   rgb(254, 213, 213);
-    font-size: 0.8rem;
+    display: block;
   }
-  .greetingTxt{
-    width: 100%;
-    color:   rgb(254, 213, 213);
-    font-weight: 400;
-    font-size: 0.9rem;
-  }
+
 }
 
 @media (min-width: 1024px) {
@@ -75,8 +116,9 @@
   
         font-size: 1.1rem;
       }
+     
       .greetingSubtitle{
-        padding-top: 60px;
+      
         font-size: 1rem;
       }
     }

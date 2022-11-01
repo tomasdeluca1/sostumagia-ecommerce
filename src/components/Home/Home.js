@@ -5,12 +5,13 @@ const Home = () => {
   return (
     <div>
       <div className="welcomeMessage">
-        <div className="fotoAgus">
-          <img
+        <div className="fotoAgusHome">
+          <div className="agusBackground"> . </div>
+          {/* <img
             src="./../../img/fotoAgustinillis.jpg"
             className="agusJpg"
             alt=""
-          />
+          /> */}
         </div>
         <div className="greetingDesktop">
           <div className="greetingBox">
@@ -19,14 +20,16 @@ const Home = () => {
                 <h2>¡Bienvenido a sos tu magia!</h2>
               </div>
               <div className="greetingTxt">
-                <h3>Espacio para reencontrarte con tu esencia.</h3>
+                <h3>Cursos para reencontrarte con tu esencia.</h3>
               </div>
             </div>
 
             <div className="greetingSubtitle">
               <p>
-                <strong>Agus Deluca</strong>. Psicopedagoga y apasionada por la
-                educación y el aprendizaje.
+                <strong>Agus Deluca</strong>
+                <br />
+                Psicopedagoga, profesora y apasionada en enseñar y guiar a los
+                demás en el camino hacia ellos mismos.
               </p>
             </div>
           </div>
