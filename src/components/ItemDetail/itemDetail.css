@@ -9,7 +9,7 @@
         padding: 0px 20px 0 20px;
         margin: 60px 5%;
         border-radius: 1rem;
-        width: 50%;        flex-direction: column;
+        width: 70%;        flex-direction: column;
         display: flex;
         align-items: center;
         justify-content:space-between;
@@ -113,12 +113,15 @@
     padding: 10px;
 } */
 }
-
 @media (min-width:756px) {
+    
+}
+@media (min-width:1024px) {
     .itemDetailCard{
         flex-direction: row;
         align-items: flex-end;
         width: 90%;
+        height: 45vh;
     }
     .detailImg{
         width: 40%;
@@ -127,11 +130,12 @@
     }
     .detailInfo{
         width: 56%;
-        height: 30vh;
+        height: 40vh;
         padding: 0 2%;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        align-items: flex-end;
+        justify-content: space-evenly;
     }
     .itemCard{
         width: 33%;
