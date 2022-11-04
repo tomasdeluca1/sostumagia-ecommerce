@@ -3,9 +3,9 @@
         width: 50px;
         height: 40px;
         border:indianred 2px solid;
-        background-color:rgb(254, 213, 213,0.9);
+        background-color:#fed5d5e6;
         margin: 5px 0 ;
-        font-size: 20px;
+        font-size: 14px;
         transition: all 0.25s
     }   
     .defaultButton:hover{
@@ -18,6 +18,6 @@
 @media (min-width:756px) {
     .defaultButton{
         width: 35px;
+        font-size: 18px;
        }
-       
 }
