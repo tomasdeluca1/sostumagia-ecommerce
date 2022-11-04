@@ -13,7 +13,9 @@
   
     .greetingDesktop{
       display: flex;
-      width: 100%; height: 15vh;
+      width: 90%; 
+      margin: 0 5%; 
+      height: 15vh;
     }
     .greetingBox{
       width:100%;
@@ -27,7 +29,7 @@
     }
     .greetingTitle{
       width: 100%;
-      font-size: 1.2rem;
+      font-size: 0.7rem;
       color:   indianred;
       font-weight: 900;
       margin-bottom: 10px;
@@ -42,15 +44,29 @@
     }
     .greetingTxt{
       width: 100%;
-      color: rgb(254, 213, 213);
-      background-color:   indianred;
+      background-color: rgb(254, 213, 213);
+      color:   indianred;
       font-weight: 400;
-      font-size: 1rem;
+      font-size: 0.7rem;
       padding: 3px;
       border-radius: 0.5rem;
     }
 }
-
+@media (min-width: 456px) {
+  .greetingDesktop{
+    width: 80%; 
+    margin: 0 10%; 
+  }
+  .greetingTitle{
+  
+    font-size: 1rem;
+   
+  }
+  .greetingTxt{
+    font-size: 0.8rem;
+    
+  }
+}
 @media (min-width: 756px) {
   .greetingBox{
     align-items:flex-start;
@@ -59,7 +75,8 @@
   }
   .greetingDesktop{
     width: 60%;
-    height: 30vh;
+    height: 40vh;
+    margin:0;
   }
     .welcomeMessage{
     display: flex;
@@ -94,11 +111,12 @@
 }
 .greetingTxt{
   color:   rgb(254, 213, 213);
+  background-color: indianred;
   padding: 0 0 0 10px;
 }
   .agusBackground{
     width: 100%;
-   height: 30vh;
+   height: 40vh;
   }
   .greetingSubtitle{
     display: block;
@@ -118,7 +136,7 @@
       }
      
       .greetingSubtitle{
-      
+        width: 100%;
         font-size: 1rem;
       }
     }
