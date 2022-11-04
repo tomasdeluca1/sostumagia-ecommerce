@@ -4,36 +4,67 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-top: 60px;
+        padding-bottom: 130px;
     }
 .cartCard{
     width: 90%;
-    height: 200px;
+    height: 45vh;
     margin:  20px 4%;
     padding: 1%;
     border-radius: 1rem;
     background-color: indianred;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
 }
-.cartButtonsFlex{
+.cartButtonsFinalPrice{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    background-color: indianred;
+    padding-bottom: 10px;
+    bottom: 0px;
+    border-radius: 0.5rem;
+    border: 2px indianred dotted;
+    box-shadow: 0px 0px 15px 5px rgb(205, 92, 92,0.3);
+}
+.cartButtonsFlex{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    align-items: center;
+    justify-content: space-evenly;
 }
 .cartCardSeparator{
-    width: 15%;
+    width: 95%;
     padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+.cardInfoFlex{
+    display: flex;
+    width: 80%;
 
+    padding: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.cartInfo{
+    width: 45%;
+}
 .cartProductImg{
     width: 100%;
     border-radius: 0.5rem;
+    height: 20vh;
+    background-size:cover;
+    background-position: center;
 }
 
 .checkoutLink a{
@@ -68,8 +99,38 @@
     .cartName{
         color: rgb(254, 213, 213);
     }
-}
-
+   
+    }
+  
 @media (min-width:756px) {
- 
+    .cartCard{
+        height: 25vh;
+        flex-direction: row;
+    }
+    .cartProductImg{
+        height: 23vh;
+    }
+    .categoryTitle{
+        font-size: 26px;
+    }
+    .cartCardSeparator{
+        width: 24%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .cardInfoFlex{
+        width: 24%;
+        flex-direction: column;
+        height: 15vh;
+    }
+    .cartInfo{
+        width: 100%;
+    }
+    .cartButtonsFinalPrice{
+        width: 50vw;
+        justify-content: space-around;
+    }
 }

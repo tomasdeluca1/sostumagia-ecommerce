@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useCart } from "../../context/cartContext/CartContext";
 import CartCard from "./CartCard";
 import Button from "../Button/Button";
+import "../ItemListContainer/ItemListContainer.css";
 
 const Cart = () => {
   const { removeList, getTotal, cart } = useCart();
@@ -16,7 +17,9 @@ const Cart = () => {
 
   return (
     <div className="cartFlex">
-      <h1>CARRITO DE COMPRAS</h1>
+      <h3 className="categoryTitle" style={{ display: "block" }}>
+        Carrito de compras
+      </h3>
       {cart.map((item) => (
         <CartCard
           id={item.id}
@@ -27,34 +30,38 @@ const Cart = () => {
           quantity={item.quantity}
         />
       ))}
-      <h2 style={{ margin: "10px 0 " }}>TOTAL A PAGAR: {totalPrice} ARS</h2>
-      <div className="cartButtonsFlex">
-        <Link to="/checkout">
+      <div className="cartButtonsFinalPrice">
+        <h4 style={{ margin: "10px 0", color: "#fed5d5e6" }}>
+          TOTAL A PAGAR: {totalPrice} ARS
+        </h4>
+        <div className="cartButtonsFlex">
+          <Link to="/checkout">
+            <Button
+              label="Checkout"
+              background="green"
+              fontColor=" white"
+              topRight="0.5rem"
+              bottomRight="0.5rem"
+              topLeft="0.5rem"
+              bottomLeft="0.5rem"
+              width="22vw"
+            />
+            {/* {" "}
+          <div className="checkoutLink">Checkout</div> */}
+          </Link>
+
           <Button
-            label="Checkout"
-            background="green"
+            accion={removeList}
+            label="Vaciar"
+            background="red"
             fontColor=" white"
             topRight="0.5rem"
             bottomRight="0.5rem"
             topLeft="0.5rem"
             bottomLeft="0.5rem"
-            width="200px"
+            width="22vw"
           />
-          {/* {" "}
-          <div className="checkoutLink">Checkout</div> */}
-        </Link>
-
-        <Button
-          accion={removeList}
-          label="Eliminar carrito"
-          background="red"
-          fontColor=" white"
-          topRight="0.5rem"
-          bottomRight="0.5rem"
-          topLeft="0.5rem"
-          bottomLeft="0.5rem"
-          width="200px"
-        />
+        </div>
       </div>
     </div>
   );
