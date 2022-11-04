@@ -7,6 +7,8 @@
     background-color: indianred;
     align-items: center;
     justify-content: space-between;
+    z-index: 1;
+    box-shadow: 0px 0px 10px 2px rgb(40 44 52 / 60%);;
   }
   .agusJpgMobile{
     width: 100%;
@@ -41,10 +43,9 @@
     align-items: center;
     justify-content: center;
     color:rgb(254, 213, 213, 1);
-    
+    cursor: pointer;
     background-color: indianred;
     border: rgb(254, 213, 213) solid 0px; 
-    box-shadow: 0px 0px 10px 2px rgb(254, 213, 213, 0.1);
     border-radius: 1rem;
     font-size: 32px;
   }
@@ -58,14 +59,13 @@
     background-color:indianred;
     color: rgb(254, 213, 213, 1);
     border: rgb(254, 213, 213) solid 0px; 
-    box-shadow: 1px 1px 10px 2px rgb(254, 213, 213, 0.1);
     border-radius: 1rem;
-    font-size: 18px;
+    font-size: 22px;
   }
-  .cartIconMobile:hover{
+  /* .cartIconMobile:hover{
    color:indianred;
      background-color: rgb(254, 213, 213, 1);
-  }
+  } */
   .xIcon{
     color: rgb(254, 213, 213);
     background-color: indianred;
@@ -76,6 +76,7 @@
     align-items: center;
     justify-content: center;
     font-weight: 800;
+    cursor: pointer;
   }
 
   .greetingDesktop{

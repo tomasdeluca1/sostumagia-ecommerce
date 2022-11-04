@@ -23,7 +23,12 @@ const NavBar = () => {
           isMenuDisplayBlock ? { marginLeft: "0" } : { marginLeft: "-76%" }
         }
       >
-        <Link to="/">
+        <Link
+          to="/"
+          onClick={() => {
+            setIsMenuDisplayBlock(false);
+          }}
+        >
           <img
             src="./../../img/fotoAgustinillis.jpg"
             className="agusJpgMobile"
@@ -39,6 +44,9 @@ const NavBar = () => {
                   <NavLink
                     to={`/category/${cat.categoryId}`}
                     className={isActive}
+                    onClick={() => {
+                      setIsMenuDisplayBlock(false);
+                    }}
                   >
                     {cat.categoryTitle}
                   </NavLink>
