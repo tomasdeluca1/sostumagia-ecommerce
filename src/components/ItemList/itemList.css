@@ -4,7 +4,6 @@
         flex-direction: column;
         width: 100%;
         justify-content: center;
-        margin-top: 50px;
     }   
 }
 
@@ -12,5 +11,6 @@
     .itemFlex{
         flex-direction: row;
         flex-wrap: wrap;
+        margin-top: 40px;
     }   
 }

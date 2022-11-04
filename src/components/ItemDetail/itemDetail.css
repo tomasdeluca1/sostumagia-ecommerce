@@ -6,40 +6,43 @@
     
         background-color: indianred;
         box-shadow: 0px 0px 10px 2px rgb(40, 44, 52,0.4);
-        padding: 0px 20px 0 20px;
-        margin: 60px 5%;
+        padding: 10px 20px;
+        margin: 30px 5%;
         border-radius: 1rem;
         width: 70%;        flex-direction: column;
         display: flex;
         align-items: center;
-        justify-content:space-between;
+        justify-content:space-evenly;
+        height: 80vh;
     }
     .detailImg{
         width: 100%;
-        padding-top: 20px;
-        padding-bottom: 10px;
+    }
+    .detailInfo{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     .courseDetailName{
        
         color:  rgb(254, 213, 213);
-        
-       
         text-align: center;
         font-weight: 700;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         padding: 10px 5px;
     }
     
     .courseDetailType{
       
-        color:darkred;
+        color:rgb(254, 213, 213);
         font-weight: 500;
         font-style: italic;
-        width: 50%;
-        margin: 0 23% 15px 23%;
-        background-color: rgb(254, 213, 213,0.9);
-        box-shadow: 0px 0px 15px 2px rgb(40, 44, 52,0.2);;
-        padding: 7px 2% ;
+        width: 60%;
+        background-color: rgba(155, 43, 43, 0.4);
+        box-shadow: 0px 0px 10px 2px rgb(40, 44, 52,0.3);;
+        padding: 5px 2% ;
         border-radius: 0.5rem;
 
     }
@@ -48,6 +51,9 @@
     }
     .courseDetailImg{
         width: 100%;
+        height: 30vh;
+        background-size:cover;
+        background-position: center;
         border-radius: 0.5rem; margin-bottom: 10px;
     }
     
@@ -81,7 +87,7 @@
         margin:  0  ;
     }
     .courseDetailPriceStock{
-        width: 50%;
+        width: 70%;
         margin: 10px;
         text-align: center;
     align-items: center;
@@ -108,12 +114,17 @@
     font-weight: 800;
 }
 
-/* .agregarACarrito{
-    background-color:rgb(254, 213, 213) ;
-    padding: 10px;
-} */
 }
-@media (min-width:756px) {
+@media (min-width:456px) {
+    .bottomDetailCard{
+        flex-direction: row;
+    }
+    .courseDetailPriceStock{
+        width: 50%;
+    }
+    .detailCounter{
+        width: 50%;
+    }
     
 }
 @media (min-width:1024px) {
@@ -127,6 +138,9 @@
         width: 40%;
         padding-top: 20px;
         padding-bottom: 10px;
+    }
+    .courseDetailImg{
+        height: 40vh;
     }
     .detailInfo{
         width: 56%;
@@ -144,9 +158,7 @@
     .detailCounter{
         width: 50%;
     }
-    .bottomDetailCard{
-        flex-direction: row;
-    }
+   
 }
     @media (min-width:1024px) {
         .itemDetailCard{

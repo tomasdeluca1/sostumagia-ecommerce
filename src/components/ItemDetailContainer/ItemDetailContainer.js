@@ -28,7 +28,6 @@ const ItemDetailContainer = () => {
         El producto con ID: <strong>{product.id}</strong> no existe.
       </p>
     );
-
   return (
     <div className="itemListView">
       <ItemDetail {...product} itemId={itemId} />

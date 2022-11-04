@@ -7,7 +7,7 @@ const Item = ({ id, name, description, price, type, img, stock }) => {
   return (
     <div className="itemCard">
       <div className="courseName">{name}</div>
-      <ItemImg productImg={img} />
+      <ItemImg productImg={img} imgClassName={"courseImg"} />
       <div className="courseTxt">
         <p className="courseDesc">{description}</p>
       </div>

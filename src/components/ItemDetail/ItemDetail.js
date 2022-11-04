@@ -30,10 +30,10 @@ const ItemDetail = ({
   return (
     <div className="itemDetailCard">
       <div className="detailImg">
-        <ItemImg productImg={img} />
+        <ItemImg productImg={img} imgClassName={"courseDetailImg"} />
       </div>
       <div className="detailInfo">
-        <h2 className="courseDetailType">{type}</h2>
+        <h3 className="courseDetailType">{type}</h3>
         <div className="courseDetailTxt">
           <div className="courseDetailName">{name}</div>
           <p className="courseDetailDesc">{description}</p>

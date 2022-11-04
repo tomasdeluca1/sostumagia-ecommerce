@@ -29,18 +29,39 @@
     .loading{
         margin: 30px;
     }
- 
+ .categoryTitle{
+    margin: 0 0 30px 0;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    color: rgb(254, 213, 213);
+    background-color: indianred;
+    padding: 5px 10px 7px 10px;
+    font-weight: 600;
+    box-shadow: 0px 5px 10px 2px rgb(40 44 52 / 40%);
+}
+}
+@media (min-width: 456px) {
+    .categoryTitle{
+        font-size: 22px;
+     }
 }
 @media (min-width: 756px) {
     .itemListView {
         width: 96%;
-        margin: 20px 2% 40px 2%;
+        margin: 0px 2% 40px 2%;
         position: relative;
     }
     .viewsTitle{
         font-size: 2rem;
         margin-bottom: 40px;
     }
+    .categoryTitle{
+        display: none;
+        font-size: 26px;
+    padding: 10px 15px;
+
+    box-shadow: 0px 0px 10px 2px rgb(40 44 52 / 40%);
+     }
 }
 @media (min-width: 942px) {
     

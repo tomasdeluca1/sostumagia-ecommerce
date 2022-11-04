@@ -1,7 +1,7 @@
 import "./ItemListContainer.css";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
-import { getProducts } from "../../services/firebase/firestore";
+import { getCategories, getProducts } from "../../services/firebase/firestore";
 import { useAsync } from "../../Hooks/useAsync";
 
 const ItemListContainer = ({ greeting }) => {
@@ -14,6 +14,12 @@ const ItemListContainer = ({ greeting }) => {
     loading,
   } = useAsync(() => getProducts(categoryType), [categoryType], mensajeError);
 
+  const { data: categories } = useAsync(
+    () => getCategories(categoryType),
+    [categoryType],
+    ""
+  );
+
   if (loading) {
     return <h1 className="loading">Loading...</h1>;
   }
@@ -22,15 +28,29 @@ const ItemListContainer = ({ greeting }) => {
     return <h1>Hay un error, comunicarse con el administrador.</h1>;
   }
 
-  const type = products.map((product) => product.type);
-
-  return (
-    <div>
-      <div className="itemListView">
-        <ItemList items={products} />
-      </div>
-    </div>
+  const [category] = categories.filter(
+    (cat) => cat.categoryId === categoryType
   );
+  {
+    categoryType && console.log(category);
+  }
+  if (!categoryType) {
+    return (
+      <div>
+        <div className="itemListView">
+          <ItemList items={products} />
+        </div>
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <div className="itemListView">
+          <h4 className="categoryTitle">{category.categoryTitle}</h4>
+          <ItemList items={products} />
+        </div>
+      </div>
+    );
+  }
 };
-
 export default ItemListContainer;

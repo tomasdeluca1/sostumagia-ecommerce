@@ -41,7 +41,7 @@
     }
     .courseImg{
         width: 100%;
-        height: 30vh;
+        height: 25vh;
         background-size:cover;
         background-position: center;
         border-radius: 0.5rem; margin-bottom: 10px;
@@ -128,12 +128,23 @@
 
     .itemCard{
         width: 33%;
-        margin: 20px 2.5% 20px 2.5%;
-    }}
+        margin: 20px 5% 20px 5%;
+        transition: all 0.3s;
+    }
+    .itemCard:hover{
+        width: 37%;
+        margin: 20px 1%;
+    }
+    
+}
     @media (min-width:1024px) {
     
         .itemCard{
             width: 25%;
-    
+            margin: 20px 5%;
+        }
+        .itemCard:hover{
+            width: 27%;
+            margin: 20px 1%;
         }}
     

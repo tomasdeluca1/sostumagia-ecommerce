@@ -1,9 +1,9 @@
 import "../Item/item.css";
 
-const ItemImg = ({ productImg }) => {
+const ItemImg = ({ productImg, imgClassName }) => {
   return (
     <div
-      className="courseImg"
+      className={imgClassName}
       style={{ backgroundImage: `url(${productImg})` }}
     ></div>
   );
