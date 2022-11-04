@@ -41,8 +41,8 @@ const Checkout = () => {
     );
   } else {
     return (
-      <div>
-        <h2 className="checkoutTitle">Datos del comprador:</h2>
+      <div className="checkoutView">
+        <h3 className="checkoutTitle">Datos del comprador:</h3>
         <CheckoutForm generateOrder={generateOrder} />
       </div>
     );

@@ -17,3 +17,10 @@ h2{
     margin-top: 7px;
     color: rgb(254, 213, 213);
 }
+.checkoutView{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+}

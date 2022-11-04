@@ -10,7 +10,7 @@ const CheckoutForm = ({ generateOrder }) => {
     getValues,
   } = useForm();
 
-  const [emailConfirmated, setEmailConfirmated] = useState(false);
+  const [emailConfirmated, setEmailConfirmated] = useState(true);
 
   const onSubmit = (data, e) => {
     Object.keys(errors).length === 0 && emailConfirmated
@@ -26,7 +26,7 @@ const CheckoutForm = ({ generateOrder }) => {
   };
 
   return (
-    <div>
+    <div className="formBox">
       <form className="checkoutForm" onSubmit={handleSubmit(onSubmit)}>
         <input
           type="text"
