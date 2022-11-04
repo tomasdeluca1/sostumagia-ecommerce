@@ -2,21 +2,11 @@ import { createContext, useState, useContext } from "react";
 import "./notifications.css";
 
 const Notification = ({ msg, severity }) => {
-  const notificationStyles = {
-    position: "absolute",
-    right: 10,
-    borderRadius: "1rem",
-    padding: "10px 20px",
-    color: "white",
-  };
-
+  const color = severity === "success" ? "green" : "red";
   if (msg === "") return;
 
   return (
-    <div
-      className={severity === "success" ? "success" : "fail"}
-      style={notificationStyles}
-    >
+    <div className="notification" style={{ backgroundColor: color }}>
       {msg}
     </div>
   );
