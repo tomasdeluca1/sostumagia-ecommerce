@@ -17,13 +17,13 @@ const Item = ({ id, name, description, price, type, img, stock }) => {
           <h5 className="courseStock">Disponibles: {stock}</h5>
           <h4 className="coursePrice">{price} ARS</h4>
         </div>
-        <div>
-          <h4 className="courseType">{type}</h4>
-        </div>
+        <Link to={`/item/${id}`} className="linkToItem">
+          Más detalles
+        </Link>
       </div>
-      <Link to={`/item/${id}`} className="linkToItem">
-        Más detalles
-      </Link>
+      <div>
+        <h4 className="courseType">{type}</h4>
+      </div>
     </div>
   );
 };
