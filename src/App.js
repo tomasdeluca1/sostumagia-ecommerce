@@ -10,10 +10,10 @@ import NotificationContextProvider from "./context/NotificationContext/Notificat
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Cart from "./components/Cart/Cart";
 import Footer from "./components/Footer/Footer";
-import { inject } from "@vercel/analytics";
+// import { inject } from "@vercel/analytics";
 
-// Make sure to call this only once in your app
-inject();
+// // Make sure to call this only once in your app
+// inject();
 
 function App() {
   return (
