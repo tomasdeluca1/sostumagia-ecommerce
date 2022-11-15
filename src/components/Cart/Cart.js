@@ -12,7 +12,7 @@ const Cart = () => {
 
   if (cart.length === 0)
     return (
-      <div style={{ position: "relative", minHeight: "30vh" }}>
+      <div style={{ position: "relative", minHeight: "50vh" }}>
         <h2 className="vistaImposibilitada">El carrito se encuentra vacío</h2>
       </div>
     );

@@ -14,8 +14,8 @@
     .greetingDesktop{
       display: flex;
       width: 100%; 
-      margin: 0; 
-      height: 13vh;
+      margin-bottom: 10px; 
+      /* height: 13vh; */
     }
     .greetingBox{
       width:100%;
@@ -29,7 +29,7 @@
     }
     .greetingTitle{
       width: 100%;
-      font-size: 0.7rem;
+      font-size: 0.9rem;
       background-color:   indianred;
       color: rgb(254, 213, 213);
       padding: 10px 0;
@@ -45,15 +45,13 @@
 
     }
     .greetingTxt{
-      width: 60%;
+      width: 100%;
       background-color: rgb(254, 213, 213);
       color:   indianred;
       font-weight: 400;
-      font-size: 0.7rem;
-      padding: 2px 5px 5px 5px;
-      border: indianred 1px solid;
-      border-bottom-right-radius: 0.5rem;
-      border-bottom-left-radius: 0.5rem;
+      font-size: 0.8rem;
+      padding: 2px 0 5px 0;
+      border-bottom: indianred 1px solid;
       /* border-radius: 0.5rem; */
     }
 }
@@ -70,7 +68,7 @@
     font-size: 1rem;
     margin-top: -1%;
     padding-top: 2%;
-    width: 90%;
+    width: 100%;
     background-color: rgb(0,0,0,0);
   }
 }
