@@ -6,7 +6,7 @@ const Home = () => {
     <div>
       <div className="welcomeMessage">
         <div className="fotoAgusHome">
-          <div className="agusBackground"> . </div>
+          <div className="agusBackground"> .</div>
           {/* <img
             src="./../../img/fotoAgustinillis.jpg"
             className="agusJpg"
@@ -15,14 +15,14 @@ const Home = () => {
         </div>
         <div className="greetingDesktop">
           <div className="greetingBox">
-            <div>
-              <div className="greetingTitle">
-                <h2>¡Bienvenido a sos tu magia!</h2>
-              </div>
-              <div className="greetingTxt">
-                <h3>Cursos para reencontrarte con tu esencia.</h3>
-              </div>
+            {/* <div> */}
+            <div className="greetingTitle">
+              <h3>¡Bienvenido a sos tu magia!</h3>
             </div>
+            <div className="greetingTxt">
+              <h4>Cursos para reencontrarte con tu esencia.</h4>
+            </div>
+            {/* </div> */}
 
             <div className="greetingSubtitle">
               <p>

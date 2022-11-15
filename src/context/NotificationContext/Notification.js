@@ -2,7 +2,7 @@ import { createContext, useState, useContext } from "react";
 import "./notifications.css";
 
 const Notification = ({ msg, severity }) => {
-  const color = severity === "success" ? "green" : "red";
+  const color = severity === "success" ? "#23C552" : "#F84F31";
   if (msg === "") return;
 
   return (
@@ -24,7 +24,7 @@ export const NotificationProvider = ({ children }) => {
 
     setTimeout(() => {
       setMessage("");
-    }, 5000);
+    }, 55000);
   };
 
   return (

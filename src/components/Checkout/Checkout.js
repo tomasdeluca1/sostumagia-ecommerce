@@ -24,11 +24,19 @@ const Checkout = () => {
     }
   };
 
-  if (loading) return <h2>Su orden se está generando</h2>;
+  if (loading)
+    return (
+      <h2 style={{ position: "relative", minHeight: "100vh" }}>
+        Su orden se está generando
+      </h2>
+    );
 
   if (cart.length === 0) {
     return (
-      <div className="checkoutBox">
+      <div
+        style={{ position: "relative", minHeight: "100vh" }}
+        className="checkoutBox"
+      >
         <div>
           <h2>Para el checkout es necesario tener</h2>
         </div>

@@ -3,12 +3,12 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         padding-bottom: 130px;
     }
 .cartCard{
     width: 90%;
-    height: 45vh;
+   
     margin:  20px 4%;
     padding: 1%;
     border-radius: 1rem;
@@ -26,16 +26,17 @@
     width: 100%;
     position: fixed;
     background-color: indianred;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
     bottom: 0px;
     border-radius: 0.5rem;
     border: 2px indianred dotted;
     box-shadow: 0px 0px 15px 5px rgb(205, 92, 92,0.3);
+    z-index: 1;
 }
 .cartButtonsFlex{
     display: flex;
     flex-direction: row;
-    width: 50%;
+    width: 70%;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -98,6 +99,7 @@
     }
     .cartName{
         color: rgb(254, 213, 213);
+        
     }
    
     }
@@ -125,6 +127,9 @@
         width: 24%;
         flex-direction: column;
         height: 15vh;
+    }
+    .cartName{
+        font-size: 1rem;
     }
     .cartInfo{
         width: 100%;

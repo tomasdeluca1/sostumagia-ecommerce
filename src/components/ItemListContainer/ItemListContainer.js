@@ -3,8 +3,10 @@ import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import { getCategories, getProducts } from "../../services/firebase/firestore";
 import { useAsync } from "../../Hooks/useAsync";
+import { useState } from "react";
 
 const ItemListContainer = ({ greeting }) => {
+  const [categoria, setCategoria] = useState("");
   const mensajeError = "No se pueden obtener los productos";
   const { categoryType } = useParams();
 
@@ -20,8 +22,17 @@ const ItemListContainer = ({ greeting }) => {
     ""
   );
 
+  // const [categoryNumber, categoryTitle, type, catId] = category;
+
   if (loading) {
-    return <h1 className="loading">Loading...</h1>;
+    return (
+      <h1
+        className="loading"
+        style={{ position: "relative", minHeight: "50vh" }}
+      >
+        Loading...
+      </h1>
+    );
   }
 
   if (error) {
@@ -31,6 +42,14 @@ const ItemListContainer = ({ greeting }) => {
   const [category] = categories.filter(
     (cat) => cat.categoryId === categoryType
   );
+
+  const categoryData = { ...category };
+  const CatTitle = categoryData.categoryTitle;
+  // category.find(
+  //   (element) =>
+  //     element == "Cursos presenciales" || "Cursos online" || "Cursos gratuitos"
+  // );
+
   {
     categoryType && console.log(category);
   }
@@ -46,7 +65,8 @@ const ItemListContainer = ({ greeting }) => {
     return (
       <div>
         <div className="itemListView">
-          <h4 className="categoryTitle">{category.categoryTitle}</h4>
+          {/* <h4 className="categoryTitle"></h4> */}
+          <h4 className="categoryTitle">{CatTitle}</h4>
           <ItemList items={products} />
         </div>
       </div>

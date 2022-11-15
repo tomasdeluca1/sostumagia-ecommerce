@@ -12,7 +12,9 @@ const Cart = () => {
 
   if (cart.length === 0)
     return (
-      <h2 className="vistaImposibilitada">El carrito se encuentra vacío</h2>
+      <div style={{ position: "relative", minHeight: "30vh" }}>
+        <h2 className="vistaImposibilitada">El carrito se encuentra vacío</h2>
+      </div>
     );
 
   return (
@@ -38,13 +40,13 @@ const Cart = () => {
           <Link to="/checkout">
             <Button
               label="Checkout"
-              background="green"
+              background="#23C552"
               fontColor=" white"
               topRight="0.5rem"
               bottomRight="0.5rem"
               topLeft="0.5rem"
               bottomLeft="0.5rem"
-              width="22vw"
+              width="25vw"
             />
             {/* {" "}
           <div className="checkoutLink">Checkout</div> */}
@@ -53,13 +55,13 @@ const Cart = () => {
           <Button
             accion={removeList}
             label="Vaciar"
-            background="red"
+            background="#F84F31"
             fontColor=" white"
             topRight="0.5rem"
             bottomRight="0.5rem"
             topLeft="0.5rem"
             bottomLeft="0.5rem"
-            width="22vw"
+            width="25vw"
           />
         </div>
       </div>

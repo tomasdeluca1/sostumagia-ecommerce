@@ -34,7 +34,7 @@ const CartCard = ({ id, name, price, img, quantity }) => {
         <Button
           accion={handleOnDelete}
           label="Quitar"
-          background="red"
+          background="#F84F31"
           fontColor="white"
           topRight="0.5rem"
           bottomRight="0.5rem"
