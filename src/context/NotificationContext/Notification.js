@@ -24,7 +24,7 @@ export const NotificationProvider = ({ children }) => {
 
     setTimeout(() => {
       setMessage("");
-    }, 55000);
+    }, 4000);
   };
 
   return (

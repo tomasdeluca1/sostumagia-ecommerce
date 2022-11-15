@@ -135,7 +135,7 @@
         width: 100%;
     }
     .cartButtonsFinalPrice{
-        width: 50vw;
+        width: 100%;
         justify-content: space-around;
     }
 }
