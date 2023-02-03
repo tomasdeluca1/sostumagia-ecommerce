@@ -18,7 +18,7 @@ Segundo paso:
 npm install
 ```
 
-> Proyecto deployado en [Sos tu magia](https://sos-tu-magia.vercel.app/) con las variables de entorno configuradas.
+> Proyecto deployado en [Sos tu magia](https://sostumagia.vercel.app/) con las variables de entorno configuradas.
 
 # Getting Started with Create React App
 
