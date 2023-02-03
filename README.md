@@ -9,7 +9,7 @@ Impulsado con la idea de bancar el proyecto de mi hermana Agustina Deluca, ya qu
 Primer paso:
 
 ```sh
-git clone https://github.com/tomasdeluca1/sos-tu-magia.git
+git clone https://github.com/tomasdeluca1/sostumagia-ecommerce.git
 ```
 
 Segundo paso:
