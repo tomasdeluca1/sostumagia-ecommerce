@@ -1,269 +1,75 @@
-@media (min-width: 0) {
-  .menuMobile{
-    display: flex;
-    width: 85%;
-    padding: 10px 5% 10px 10%;
-    margin: 0;
-    background-color: indianred;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1;
-    box-shadow: 0px 0px 10px 2px rgb(40 44 52 / 60%);;
-  }
-  .agusJpgMobile{
-    width: 100%;
-  }
-  .agusJpg{
-    width: 100%;
-    box-shadow: 0px 0px 10px 2px rgba(110, 110, 110, 0.6);
-  }
-  .logoBoxMobile{
-    width: 100%;
-  }
-  .logoMobile{
-    width: 50%;
-    padding: 5px 0;
-    display: flex;
-  }
-  .barsIconBox{
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-  }  
-  .cartBarsFlex{
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-  .barsIcon{
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color:rgb(254, 213, 213, 1);
-    cursor: pointer;
-    background-color: indianred;
-    border: rgb(254, 213, 213) solid 0px; 
-    border-radius: 1rem;
-    font-size: 32px;
-  }
-  .cartIconMobile{
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content:space-evenly;
-    padding: 5px;
-    background-color:indianred;
-    color: rgb(254, 213, 213, 1);
-    border: rgb(254, 213, 213) solid 0px; 
-    border-radius: 1rem;
-    font-size: 22px;
-  }
-  /* .cartIconMobile:hover{
-   color:indianred;
-     background-color: rgb(254, 213, 213, 1);
-  } */
-  .xIcon{
-    color: rgb(254, 213, 213);
-    background-color: indianred;
-    border: #282c34 solid 0px;width: 70px;
-    height: 70px;
-    font-size: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 800;
-    cursor: pointer;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .bg-indianred {
+    background-color: #cd5c5c;
   }
 
-  .greetingDesktop{
-    display: none;
-  }
-
-  .menu{
-    background-color: indianred;
-    width: 75%;
-    height: 100%;
-    border-radius: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    padding-bottom: 10%;
-    position: fixed;
-    visibility:visible;
-    top: 0;
-    transition: all 0.25s;
-    box-shadow: 0px 0px 10px 2px rgb(40, 44, 52,0.6);
-    z-index: 1;
-  }
-
-
-  .logo-img-header{
-    width: 150px;
-    display: none;
-  }
-  .navbar-list{
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 20px 0px;
-    width: 100%;
-    justify-content: space-around;
-  }
-  .navbar-list li{
-    list-style: none;
-    padding: 15% 15px;
-  }
-  .cart-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border:  rgb(254, 213, 213) 1px solid;
-    border-radius: 0.5rem;
-    box-shadow: 0px 0px 10px 2px rgb(40, 44, 52,0.2);
-    margin: 0 0 20px 0 ;
-  }
-  a{
-    text-decoration: none;
-  }
-  .cart-icon{
-    padding: 20px 50px;
-    color: rgb(254, 213, 213);
-  }
-  .cart-box:hover{
-    background-color: #282c34;
-    border-radius: 0.5rem;
-    box-shadow: 0px 0px 10px 2px rgb(40, 44, 52,0.6);
-  }
-  .cart-box:hover .cart-icon{
-    color:  rgb(254, 213, 213);
-  }
-  .activeOption{
+  .text-indianred {
     color: indianred;
-    background-color:  rgb(254, 213, 213);
-  
-    padding: 8px 15px;
-    border-radius: 0.3rem;  font-weight: 600;
   }
-
-  .activeOption:hover{ color:  rgb(254, 213, 213);
-    border: rgb(254, 213, 213) 2px solid;
-    padding: 6px 13px;
-    background-color: indianred;
-    box-shadow: 0px 0px 10px 2px rgb(40, 44, 52,0.2);
-  }
-
-  .navBarOption:hover{
-    border: rgb(254, 213, 213) 2px solid;
-    padding: 6px 11px;
-    box-shadow: 0px 0px 10px 2px rgb(40, 44, 52,0.2);
-  }
-  .navBarOption{
-    text-decoration: none;
-    color: rgb(254, 213, 213);
-    border-radius: 0.3rem;
-    font-weight: 600;
-    padding: 6px 13px;
-    font-size: 1rem;
-    }
-
-  .cart-box:hover{
-    background-color:  rgb(254, 213, 213);
-    border-radius: 0.5rem;
-    box-shadow: 0px 0px 10px 2px rgb(40, 44, 52,0.6);
-  }
-  .cart-box:hover .cart-icon{
-    color:  indianred;
-    }
 }
 
-@media (min-width: 756px) {
-  .menuMobile{
-    display: none;
+/* Custom Animations */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
   }
- .agusJpgMobile{
-  display: none;
- }
- 
-  .logo-img-header{
-    width: 80px;
-    display: block;
+  to {
+    transform: translateX(0);
   }
-  .displayNone{
-    display: block;  
-  }
-  .menu{
-    background-color:indianred;
-    width: 94%;
-    margin-left: 0 !important;
-    border-radius: 0;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 3%;
-    position: relative;
-    z-index: 1;
-    visibility: visible;
-    top: 0;
-  }
-  .navbar-list{
-    display: flex;
-    flex-direction: row;
-    margin: 0;
-    padding: 20px 0;
-    width: 100%;
-    justify-content: space-around;
-  }
-  .navbar-list li{
-    list-style: none;
-    padding: 0 10px;
-  }
-   .navBarOption{
-    text-decoration: none;
-    font-size: 0.8rem;
-    font-weight: 600;
-    border-radius: 0.3rem;
-  }
-  .cart-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border:  rgb(254, 213, 213) 1px solid;
-    border-radius: 0.5rem;
-    margin: 0;
-    box-shadow: 0px 0px 10px 2px rgb(40, 44, 52,0.2);
-  }
-  .cart-box {
-    text-decoration: none;
-  }
-   .cart-icon{
-  padding: 10px;
-  }
+}
 
-  
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
+}
 
-  @media (min-width: 942px) {
-    .logo-img-header{
-        width: 85px;
-      }
-    .menu{  
-        width: 90%;
-        padding: 15px 5%;
-    }
+/* Custom Hover Effects */
+.nav-link-hover {
+  position: relative;
+  overflow: hidden;
+}
 
-  }
-  @media (min-width: 1024px) {
-    .logo-img-header{
-        width: 100px;
-      }
-    .navBarOption{
-        
-        font-size: 1rem;}
-  }
+.nav-link-hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fed5d5;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.nav-link-hover:hover::after {
+  transform: translateX(0);
+}
+
+/* Focus States */
+.focus-visible:focus {
+  outline: 2px solid #fed5d5;
+  outline-offset: 2px;
+}
+
+/* Active States */
+.active-nav-link {
+  position: relative;
+}
+
+.active-nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fed5d5;
+}

@@ -2,7 +2,6 @@ import "./cart.css";
 import Button from "../Button/Button";
 import { useCart } from "../../context/cartContext/CartContext";
 import React from "react";
-import ItemImg from "../ItemImg/ItemImg";
 
 const CartCard = ({ id, name, price, img, quantity }) => {
   const { deleteItem } = useCart();
@@ -14,7 +13,7 @@ const CartCard = ({ id, name, price, img, quantity }) => {
   return (
     <div className="cartCard">
       <div className="cartCardSeparator">
-        <ItemImg productImg={img} imgClassName={"cartProductImg"} />
+        <img src={img} className="cartProductImg" alt="Product" />
       </div>
       <div className="cartCardSeparator">
         <div>Producto</div>

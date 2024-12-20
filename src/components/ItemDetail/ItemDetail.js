@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "./itemDetail.css";
 import ItemCount from "../ItemCount/ItemCount";
 import { useCart } from "../../context/cartContext/CartContext";
-import ItemImg from "../ItemImg/ItemImg";
 
 const ItemDetail = ({
   id,
@@ -30,7 +29,7 @@ const ItemDetail = ({
   return (
     <div className="itemDetailCard">
       <div className="detailImg">
-        <ItemImg productImg={img} imgClassName={"courseDetailImg"} />
+        <img src={img} className="courseDetailImg" alt="Product" />
       </div>
       <div className="detailInfo">
         <h3 className="courseDetailType">{type}</h3>

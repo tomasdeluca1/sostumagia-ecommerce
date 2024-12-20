@@ -2,10 +2,8 @@
   text-align: center;
 }
 
-
-  body{
-    font-family: 'Montserrat', sans-serif;
-    background-color: rgb(254, 213, 213);
-    text-align: center;
-  }
-  
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #fed5d5;
+  text-align: center;
+}

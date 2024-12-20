@@ -17,6 +17,7 @@
     "@testing-library/user-event": "^13.5.0",
     "@vercel/analytics": "^0.1.5",
     "babel-plugin-macros": "^3.1.0",
+    "daisyui": "^4.12.22",
     "firebase": "^9.12.1",
     "font-awesome": "^4.7.0",
     "fontawesome": "^5.6.3",
@@ -51,5 +52,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17"
   }
 }
