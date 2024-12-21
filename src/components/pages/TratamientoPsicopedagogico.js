@@ -5,7 +5,7 @@ function TratamientoPsicopedagogico() {
   return (
     <>
       <Helmet>
-        <title>Tratamiento Psicopedagógico | Agustina Illis</title>
+        <title>Tratamiento Psicopedagógico | Agustina Deluca</title>
         <meta
           name="description"
           content="Tratamiento psicopedagógico para niños y adolescentes con dificultades en el aprendizaje. También dirigido a jóvenes universitarios que quieren desarrollar técnicas de estudio."
@@ -16,43 +16,49 @@ function TratamientoPsicopedagogico() {
         />
         <link
           rel="canonical"
-          href="https://www.agustinaillis.com/tratamiento-psicopedagogico"
+          href="https://www.sostumagia.vercel.app/tratamiento-psicopedagogico"
         />
       </Helmet>
 
       <main className="min-h-screen bg-#fed5d5">
         {/* Hero Section */}
-        <div className="relative h-[60vh] md:h-[70vh] w-full">
-          <img
-            src="/img/fotoAgustinillis.jpg"
-            alt="Tratamiento Psicopedagógico"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/30" />
-          <div className="absolute inset-0 flex flex-col justify-center items-center text-white p-4 max-w-5xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-center leading-tight">
-              Tratamiento Psicopedagógico
-            </h1>
-            <p className="text-xl md:text-2xl text-center max-w-3xl font-light leading-relaxed">
-              Acompañamiento especializado para niños y adolescentes con
-              dificultades en el aprendizaje, y jóvenes universitarios que
-              buscan potenciar sus técnicas de estudio.
-            </p>
+        <div className="relative bg-[#fed5d5] overflow-hidden py-8 sm:py-12 md:py-16 lg:py-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+              <div className="text-center lg:text-left">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#cd5c5c] leading-tight">
+                  Tratamiento Psicopedagógico
+                </h1>
+                <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                  Acompañamiento especializado para niños y adolescentes con
+                  dificultades en el aprendizaje, y jóvenes universitarios que
+                  buscan potenciar sus técnicas de estudio.
+                </p>
+              </div>
+              <div className="relative h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] rounded-xl sm:rounded-2xl overflow-hidden shadow-xl sm:shadow-2xl mt-6 lg:mt-0">
+                <img
+                  src="/v2/tratamientos.png"
+                  alt="Tratamiento Psicopedagógico"
+                  className="w-full h-full object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Services Section */}
-        <div className="max-w-7xl mx-auto px-4 py-24">
-          <h2 className="text-4xl font-bold text-gray-800 text-center mb-16">
+        <div className="max-w-7xl mx-auto px-4 py-12 sm:py-16 md:py-20 lg:py-24">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 text-center mb-8 sm:mb-12 lg:mb-16">
             Nuestros Servicios
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
             <div className="group">
-              <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                <div className="mb-6 text-[#cd5c5c] bg-[#fed5d5]/30 rounded-2xl p-6 w-24 h-24 mx-auto flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <div className="bg-white/60 backdrop-blur-sm rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 sm:hover:-translate-y-2">
+                <div className="mb-4 sm:mb-6 text-[#cd5c5c] bg-[#fed5d5]/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 w-16 sm:w-24 h-16 sm:h-24 mx-auto flex items-center justify-center group-hover:scale-105 sm:group-hover:scale-110 transition-transform duration-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-14 w-14"
+                    className="h-10 w-10 sm:h-14 sm:w-14"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -65,10 +71,10 @@ function TratamientoPsicopedagogico() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-center text-gray-800">
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-center text-gray-800">
                   Evaluación Inicial
                 </h3>
-                <p className="text-gray-600 text-center text-lg leading-relaxed">
+                <p className="text-gray-600 text-center text-base sm:text-lg leading-relaxed">
                   Evaluación exhaustiva de las dificultades específicas en el
                   aprendizaje, identificando fortalezas y áreas de mejora para
                   diseñar un plan personalizado.
@@ -77,11 +83,11 @@ function TratamientoPsicopedagogico() {
             </div>
 
             <div className="group">
-              <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                <div className="mb-6 text-[#cd5c5c] bg-[#fed5d5]/30 rounded-2xl p-6 w-24 h-24 mx-auto flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <div className="bg-white/60 backdrop-blur-sm rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 sm:hover:-translate-y-2">
+                <div className="mb-4 sm:mb-6 text-[#cd5c5c] bg-[#fed5d5]/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 w-16 sm:w-24 h-16 sm:h-24 mx-auto flex items-center justify-center group-hover:scale-105 sm:group-hover:scale-110 transition-transform duration-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-14 w-14"
+                    className="h-10 w-10 sm:h-14 sm:w-14"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -94,10 +100,10 @@ function TratamientoPsicopedagogico() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-center text-gray-800">
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-center text-gray-800">
                   Técnicas de Estudio
                 </h3>
-                <p className="text-gray-600 text-center text-lg leading-relaxed">
+                <p className="text-gray-600 text-center text-base sm:text-lg leading-relaxed">
                   Desarrollo de estrategias efectivas y personalizadas de
                   aprendizaje, adaptadas a cada nivel educativo y estilo de
                   aprendizaje individual.
@@ -106,11 +112,11 @@ function TratamientoPsicopedagogico() {
             </div>
 
             <div className="group">
-              <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                <div className="mb-6 text-[#cd5c5c] bg-[#fed5d5]/30 rounded-2xl p-6 w-24 h-24 mx-auto flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <div className="bg-white/60 backdrop-blur-sm rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 sm:hover:-translate-y-2">
+                <div className="mb-4 sm:mb-6 text-[#cd5c5c] bg-[#fed5d5]/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 w-16 sm:w-24 h-16 sm:h-24 mx-auto flex items-center justify-center group-hover:scale-105 sm:group-hover:scale-110 transition-transform duration-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-14 w-14"
+                    className="h-10 w-10 sm:h-14 sm:w-14"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -123,10 +129,10 @@ function TratamientoPsicopedagogico() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-center text-gray-800">
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-center text-gray-800">
                   Apoyo Académico
                 </h3>
-                <p className="text-gray-600 text-center text-lg leading-relaxed">
+                <p className="text-gray-600 text-center text-base sm:text-lg leading-relaxed">
                   Acompañamiento personalizado y continuo para superar
                   dificultades específicas y alcanzar un mejor rendimiento
                   académico.
@@ -135,11 +141,11 @@ function TratamientoPsicopedagogico() {
             </div>
 
             <div className="group">
-              <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                <div className="mb-6 text-[#cd5c5c] bg-[#fed5d5]/30 rounded-2xl p-6 w-24 h-24 mx-auto flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <div className="bg-white/60 backdrop-blur-sm rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 sm:hover:-translate-y-2">
+                <div className="mb-4 sm:mb-6 text-[#cd5c5c] bg-[#fed5d5]/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 w-16 sm:w-24 h-16 sm:h-24 mx-auto flex items-center justify-center group-hover:scale-105 sm:group-hover:scale-110 transition-transform duration-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-14 w-14"
+                    className="h-10 w-10 sm:h-14 sm:w-14"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -152,10 +158,10 @@ function TratamientoPsicopedagogico() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-center text-gray-800">
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-center text-gray-800">
                   Acompañamiento Integral
                 </h3>
-                <p className="text-gray-600 text-center text-lg leading-relaxed">
+                <p className="text-gray-600 text-center text-base sm:text-lg leading-relaxed">
                   Colaboración activa con familias y docentes para crear un
                   ambiente de aprendizaje óptimo y consistente.
                 </p>

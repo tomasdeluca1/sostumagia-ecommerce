@@ -4,7 +4,7 @@
 
 @layer components {
   .bg-indianred {
-    background-color: #cd5c5c;
+    background-color: indianred;
   }
 
   .text-indianred {

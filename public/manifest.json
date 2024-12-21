@@ -1,35 +1,25 @@
 {
   "short_name": "Agustina Deluca",
-  "name": "Agustina Deluca - Psicopedagoga | Tratamientos y Supervisiones",
-  "description": "Psicopedagoga especializada en tratamientos para niños y adolescentes con dificultades de aprendizaje. Supervisiones para profesionales.",
+  "name": "Agustina Deluca - Psicopedagoga",
   "icons": [
     {
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon",
-      "purpose": "any maskable"
+      "type": "image/x-icon"
     },
     {
       "src": "logo192.png",
       "type": "image/png",
-      "sizes": "192x192",
-      "purpose": "any maskable"
+      "sizes": "192x192"
     },
     {
       "src": "logo512.png",
       "type": "image/png",
-      "sizes": "512x512",
-      "purpose": "any maskable"
+      "sizes": "512x512"
     }
   ],
-  "start_url": "/",
-  "scope": "/",
+  "start_url": ".",
   "display": "standalone",
-  "orientation": "portrait",
   "theme_color": "#cd5c5c",
-  "background_color": "#fed5d5",
-  "categories": ["education", "health"],
-  "lang": "es-AR",
-  "dir": "ltr",
-  "prefer_related_applications": false
+  "background_color": "#fed5d5"
 }
